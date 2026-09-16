@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio PPL Mandiri - Broadcasting & Perfilman</title>
+  <title>Portofolio PPL Mandiri - Broadcasting &amp; Perfilman</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts Inter -->
+  <!-- Google Fonts Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
@@ -161,35 +161,6 @@
       100% { transform: scale(1); opacity: 1; }
     }
 
-    /* Transparent Glass Hexagon Frame */
-    .hexagon-shape {
-      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    }
-
-    .hex-glass-container {
-      position: relative;
-      filter: drop-shadow(0 0 18px rgba(0, 238, 255, 0.35));
-      transition: all 0.35s ease;
-    }
-    .hex-glass-container:hover {
-      filter: drop-shadow(0 0 26px rgba(0, 238, 255, 0.65));
-      transform: translateY(-4px) scale(1.02);
-    }
-    .hex-glass-border {
-      padding: 3px;
-      background: linear-gradient(135deg, rgba(0, 238, 255, 0.8), rgba(255, 255, 255, 0.2), rgba(0, 238, 255, 0.35));
-      backdrop-filter: blur(8px);
-    }
-    .hex-glass-inner {
-      background: rgba(31, 36, 45, 0.65);
-      backdrop-filter: blur(10px);
-    }
-
-    /* Ratio 3:4 embed container */
-    .aspect-3-4 {
-      aspect-ratio: 3 / 4;
-    }
-
     /* Custom scrollbar */
     ::-webkit-scrollbar {
       width: 7px;
@@ -210,10 +181,10 @@
 </head>
 <body class="bg-grid-blueprint text-white font-sans min-h-screen flex flex-col antialiased selection:bg-[#00eeff] selection:text-[#1f242d] pb-24">
 
-  <!-- Neon Laser Sweep Bar for transition feedback -->
+  <!-- Neon Laser Sweep Bar -->
   <div id="tab-laser-bar" class="opacity-0"></div>
 
-  <!-- Top Minimalist Bar: Menu tersimpan di samping -->
+  <!-- Top Minimalist Bar -->
   <header class="sticky top-0 z-40 bg-[#1f242d]/85 backdrop-blur-md border-b border-[#323946]/80 px-4 sm:px-8 py-3.5 flex items-center justify-between">
     <!-- Brand Logo -->
     <a href="javascript:void(0)" onclick="switchTab('home')" class="flex items-center gap-2 group">
@@ -221,7 +192,7 @@
         Portfolio<span class="text-[#00eeff] glow-cyan">.</span>
       </span>
       <span class="hidden md:inline-block px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold tracking-wider uppercase bg-[#323946] text-[#00eeff] border border-[#00eeff]/30">
-        Broadcasting & Film
+        Broadcasting &amp; Film
       </span>
     </a>
 
@@ -258,7 +229,7 @@
         <h3 class="text-sm font-black tracking-widest text-[#00eeff] uppercase font-mono">Daftar Isi Portofolio</h3>
         <p class="text-[11px] text-slate-400">Pilih menu navigasi PPL Mandiri</p>
       </div>
-      <button onclick="closeSidebar()" class="w-8 h-8 rounded-lg bg-[#323946] text-slate-300 hover:text-[#00eeff] hover:bg-[#3f4859] flex items-center justify-center transition-colors">
+      <button onclick="closeSidebar()" class="w-8 h-8 rounded-lg bg-[#323946] text-slate-300 hover:text-[#00eeff] hover:bg-[#3f4859] flex items-center justify-center transition-colors" aria-label="Tutup Menu">
         ✕
       </button>
     </div>
@@ -322,9 +293,8 @@
 
     <!-- TAB 1: HOME -->
     <section id="section-home" class="tab-section active anim-fade-scale">
-      <!-- Big Hero Banner -->
+      <!-- Hero Banner -->
       <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#1b2029] via-[#242b38] to-[#1a1f28] border border-[#3f4859]/70 shadow-2xl p-6 sm:p-10 lg:p-14 mb-10">
-        <!-- Glow radial behind hero -->
         <div class="absolute -top-24 -right-24 w-96 h-96 bg-[#00eeff]/10 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
@@ -334,7 +304,6 @@
               PORTFOLIO SHOWCASE • SIKLUS MANDIRI
             </div>
 
-            <!-- Very Large Title -->
             <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white uppercase leading-[1.08]">
               Portofolio PPL Mandiri <br>
               <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00eeff] via-[#66f4ff] to-white glow-cyan">
@@ -345,7 +314,7 @@
             <div class="border-l-4 border-[#00eeff] pl-4 py-1">
               <h2 class="text-lg sm:text-xl font-bold text-slate-100">Broadcasting dan Perfilman</h2>
               <p class="text-sm text-slate-300 mt-1 max-w-2xl leading-relaxed">
-                Dokumentasi & Refleksi Pembelajaran Berbasis Prinsip Pembelajaran Mendalam, dengan beberapa pendekatan seperti Tarl dan CRT, Serta dengan beberapa model yang diterapkan sesuai dengan kondisi dan kebutuhan pembelajaran seperti PJBL dan PBL di SMK Negeri 1 Surabaya.
+                Dokumentasi &amp; Refleksi Pembelajaran Berbasis Prinsip Pembelajaran Mendalam (Deep Learning), mengintegrasikan pendekatan Teaching at the Right Level (TaRL) dan Culturally Responsive Teaching (CRT), serta model Project-Based Learning (PjBL) dan Problem-Based Learning (PBL) di SMK Negeri 1 Surabaya.
               </p>
             </div>
 
@@ -359,9 +328,9 @@
             </div>
           </div>
 
-          <!-- 3:4 Hero Profile Photo Frame -->
+          <!-- Hero Profile Photo Frame (3:4) -->
           <div class="lg:col-span-4 flex justify-center">
-            <div class="relative w-48 sm:w-56 aspect-[3/4] aspect-3-4 rounded-2xl p-1 bg-gradient-to-br from-[#00eeff]/80 via-[#3f4859] to-[#00eeff]/30 shadow-neon cursor-pointer hover:scale-105 transition-all duration-300 group overflow-hidden" onclick="switchTab('profile')">
+            <div class="relative w-48 sm:w-56 aspect-[3/4] rounded-2xl p-1 bg-gradient-to-br from-[#00eeff]/80 via-[#3f4859] to-[#00eeff]/30 shadow-neon cursor-pointer hover:scale-105 transition-all duration-300 group overflow-hidden" onclick="switchTab('profile')">
               <div class="w-full h-full rounded-xl overflow-hidden relative bg-[#181c24]">
                 <img 
                   src="https://lh3.googleusercontent.com/d/15WDCGb-pQcvPBXPoLScf1VXx3CHpA71k" 
@@ -381,7 +350,7 @@
         </div>
       </div>
 
-      <!-- Visual Table of Contents (Daftar Isi Visual) -->
+      <!-- Visual Table of Contents -->
       <div class="mb-12">
         <div class="flex items-center justify-between mb-6 pb-2 border-b border-[#323946]">
           <div>
@@ -404,7 +373,7 @@
             </div>
             <h3 class="text-xl sm:text-2xl font-black text-[#00eeff] group-hover:text-white transition-colors tracking-tight">Tentang Saya</h3>
             <p class="text-xs text-slate-300 mt-1.5 line-clamp-2">
-              Profil mahasiswa PPL PPG, data sekolah mitra SMKN 1 Surabaya, serta filosofi pembelajaran kejuruan.
+              Profil mahasiswa PPL PPG Prajabatan, data sekolah mitra SMKN 1 Surabaya, serta filosofi pembelajaran kejuruan.
             </p>
             <div class="mt-4 flex items-center text-xs font-bold text-[#00eeff] gap-1 group-hover:gap-2 transition-all">
               <span>Buka Profil</span>
@@ -420,7 +389,7 @@
             </div>
             <h3 class="text-xl sm:text-2xl font-black text-[#00eeff] group-hover:text-white transition-colors tracking-tight">Topik 3 PPL Mandiri</h3>
             <p class="text-xs text-slate-300 mt-1.5 line-clamp-2">
-              Analisis 6 artefak mengajar DKV & Broadcasting: Editing Video Adobe Premiere Pro, LKPD TaRL, dan video scaffolding.
+              Analisis 6 artefak mengajar DKV &amp; Broadcasting: Editing Video Adobe Premiere Pro, LKPD TaRL, dan video scaffolding.
             </p>
             <div class="mt-4 flex items-center text-xs font-bold text-[#00eeff] gap-1 group-hover:gap-2 transition-all">
               <span>Buka Topik 3</span>
@@ -468,7 +437,7 @@
             </div>
             <h3 class="text-xl sm:text-2xl font-black text-[#00eeff] group-hover:text-white transition-colors tracking-tight">Dokumentasi Kegiatan</h3>
             <p class="text-xs text-slate-300 mt-1.5 line-clamp-2">
-              Rekam jejak foto dan video kegiatan mengajar, bimbingan teknis lab, kepanitiaan HUT RI, dan supervisi DPL.
+              Rekam jejak foto dan video kegiatan mengajar, bimbingan teknis lab, kepanitiaan OSN &amp; HUT RI, dan supervisi DPL.
             </p>
             <div class="mt-4 flex items-center text-xs font-bold text-[#00eeff] gap-1 group-hover:gap-2 transition-all">
               <span>Buka Galeri</span>
@@ -483,14 +452,14 @@
     <section id="section-profile" class="tab-section">
       <div class="bg-[#323946] rounded-3xl border border-[#3f4859] p-6 sm:p-10 shadow-card mb-8">
         <div class="flex flex-col lg:flex-row items-center gap-10">
-          <!-- Profile Photo Frame (Rasio 3:4 Portrait) -->
+          <!-- Profile Photo Frame (3:4 Portrait) -->
           <div class="flex-shrink-0 flex flex-col items-center">
-            <div class="relative w-56 sm:w-64 aspect-[3/4] aspect-3-4 rounded-2xl p-1.5 bg-gradient-to-br from-[#00eeff]/80 via-[#3f4859] to-[#00eeff]/30 shadow-neon overflow-hidden">
+            <div class="relative w-56 sm:w-64 aspect-[3/4] rounded-2xl p-1.5 bg-gradient-to-br from-[#00eeff]/80 via-[#3f4859] to-[#00eeff]/30 shadow-neon overflow-hidden cursor-pointer" onclick="openLightbox('https://lh3.googleusercontent.com/d/15WDCGb-pQcvPBXPoLScf1VXx3CHpA71k', 'Foto Profil Mahasiswa - Andrean Putra Fermana')">
               <div class="w-full h-full rounded-xl overflow-hidden relative bg-[#181c24]">
                 <img 
                   src="https://lh3.googleusercontent.com/d/15WDCGb-pQcvPBXPoLScf1VXx3CHpA71k" 
                   alt="Foto Profil Mahasiswa - Andrean Putra Fermana" 
-                  class="w-full h-full object-cover object-top"
+                  class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
                   onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=15WDCGb-pQcvPBXPoLScf1VXx3CHpA71k&sz=w1000';"
                 >
                 <div class="absolute inset-0 bg-gradient-to-t from-[#1f242d]/60 via-transparent to-transparent"></div>
@@ -518,22 +487,22 @@
               </div>
               <div class="bg-[#1f242d] p-3.5 rounded-xl border border-[#3f4859]">
                 <span class="text-slate-400 block mb-1">Lokasi LPTK Perkuliahan:</span>
-                <span class="font-bold text-white text-sm">Universitas Negeri Surabaya</span>
+                <span class="font-bold text-white text-sm">Universitas Negeri Surabaya (UNESA)</span>
               </div>
               <div class="bg-[#1f242d] p-3.5 rounded-xl border border-[#3f4859]">
-                <span class="text-slate-400 block mb-1">Fokus Modul & Pendekatan:</span>
-                <span class="font-bold text-white text-sm">PBL • PjBL • TaRL • CRT • Deep Learning • Pembelajaran Sosial Emosional dan Pendidikan Inklusi</span>
+                <span class="text-slate-400 block mb-1">Fokus Modul &amp; Pendekatan:</span>
+                <span class="font-bold text-white text-sm">PBL • PjBL • TaRL • CRT • Deep Learning • PSE &amp; Inklusi</span>
               </div>
               <div class="bg-[#1f242d] p-3.5 rounded-xl border border-[#3f4859]">
-                <span class="text-slate-400 block mb-1">Perangkat Lunak Utama:</span>
-                <span class="font-bold text-white text-sm">Adobe Premiere, Adobe Ilustrator, Canva, Capcut, Coding</span>
+                <span class="text-slate-400 block mb-1">Perangkat Lunak &amp; Tools Utama:</span>
+                <span class="font-bold text-white text-sm">Adobe Premiere Pro, Adobe Illustrator, Canva, CapCut, Coding</span>
               </div>
             </div>
 
-            <!-- Riwayat Pendidikan: S1 & PPG Saja -->
+            <!-- Riwayat Pendidikan: S1 & PPG -->
             <div class="bg-[#1f242d] p-5 rounded-2xl border border-[#3f4859]">
               <div class="flex items-center justify-between mb-4 pb-2 border-b border-[#3f4859]/60">
-                <h3 class="text-xl sm:text-2xl font-black text-[#00eeff] tracking-tight uppercase flex items-center gap-2.5">
+                <h3 class="text-lg sm:text-xl font-black text-[#00eeff] tracking-tight uppercase flex items-center gap-2.5">
                   <span class="w-2.5 h-2.5 rounded-full bg-[#00eeff]"></span>
                   <span>Riwayat Pendidikan</span>
                 </h3>
@@ -549,11 +518,11 @@
                     <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-[#00eeff]/15 text-[#00eeff] border border-[#00eeff]/30 inline-block mb-2">
                       PENDIDIKAN TINGGI (S1)
                     </span>
-                    <h4 class="font-bold text-white text-sm">Strata 1 Komunikasi dan Penyiaran Islam(S1)</h4>
+                    <h4 class="font-bold text-white text-sm">Strata 1 Komunikasi dan Penyiaran Islam (S1)</h4>
                     <p class="text-[#00eeff] text-xs font-medium mt-0.5">Institut Agama Islam Negeri (IAIN) Curup</p>
 
-                    <!-- Embed Foto S1 (Rasio 4:3 Landscape) -->
-                    <div class="my-3 relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-[#181c24] border border-[#3f4859]">
+                    <!-- Embed Foto S1 (4:3) -->
+                    <div class="my-3 relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-[#181c24] border border-[#3f4859] cursor-pointer" onclick="openLightbox('https://lh3.googleusercontent.com/d/1nunEsLHqe7t0ToIYK2BVdNpTaBcG2FHO', 'Dokumentasi Akademik S1 - IAIN Curup')">
                       <img 
                         src="https://lh3.googleusercontent.com/d/1nunEsLHqe7t0ToIYK2BVdNpTaBcG2FHO" 
                         alt="Dokumentasi Akademik S1" 
@@ -566,7 +535,6 @@
                       </div>
                     </div>
 
-                    <!-- Deskripsi S1 -->
                     <p class="text-slate-300 text-xs leading-relaxed text-justify mt-2">
                       Komunikasi dan Penyiaran Islam (KPI) IAIN Curup merupakan program studi yang mempelajari ilmu komunikasi dan penyiaran yang berlandaskan nilai-nilai Islam. Pembelajarannya mencakup jurnalistik, broadcasting, public speaking, produksi media, dakwah, serta pemanfaatan teknologi komunikasi digital. Program studi ini bertujuan menghasilkan lulusan yang mampu menyampaikan pesan keislaman secara kreatif, komunikatif, dan profesional melalui berbagai media, baik konvensional maupun digital.
                     </p>
@@ -582,8 +550,8 @@
                     <h4 class="font-bold text-white text-sm">Pendidikan Profesi Guru (PPG)</h4>
                     <p class="text-[#00eeff] text-xs font-medium mt-0.5">Universitas Negeri Surabaya</p>
 
-                    <!-- Embed Foto PPG (Rasio 4:3 Landscape) -->
-                    <div class="my-3 relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-[#181c24] border border-[#3f4859]">
+                    <!-- Embed Foto PPG (4:3) -->
+                    <div class="my-3 relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-[#181c24] border border-[#3f4859] cursor-pointer" onclick="openLightbox('https://lh3.googleusercontent.com/d/1bJKXQTXkKPibTSLzr2vF0oe2V_VEvxIa', 'Dokumentasi Praktik PPG - UNESA')">
                       <img 
                         src="https://lh3.googleusercontent.com/d/1bJKXQTXkKPibTSLzr2vF0oe2V_VEvxIa" 
                         alt="Dokumentasi Praktik PPG" 
@@ -596,7 +564,6 @@
                       </div>
                     </div>
 
-                    <!-- Deskripsi PPG -->
                     <p class="text-slate-300 text-xs leading-relaxed text-justify mt-2">
                       Mengikuti Program Pendidikan Profesi Guru (PPG) Prajabatan di Universitas Negeri Surabaya yang berorientasi pada penguatan kompetensi pedagogik, sosial, dan kepribadian melalui penerapan pendekatan <em>Teaching at the Right Level</em> (TaRL), <em>Culturally Responsive Teaching</em> (CRT), Pembelajaran Sosial Emosional (PSE), Pendidikan Inklusi, serta implementasi PjBL/PBL pada praktik lapangan di SMK Negeri 1 Surabaya.
                     </p>
@@ -607,7 +574,7 @@
 
             <div class="bg-[#1f242d] p-4 rounded-xl border border-[#3f4859] text-xs text-slate-300 leading-relaxed">
               <p class="font-bold text-[#00eeff] mb-1">Biografi Profesional Singkat:</p>
-              Menjadi guru yang adaptif dalam menghadapi perubahan, jujur dalam setiap tindakan, dan berkarakter dalam memberikan keteladanan bagi peserta didik. dengan Berdedikasi dalam menghadirkan pembelajaran kejuruan yang berpusat pada peserta didik, bermakna (meaningful), serta menyenangkan (joyful). Melalui pendekatan Teaching at the Right Level (TaRL) dan Culturally Responsive Teaching (CRT), materi teknis pascaproduksi video dan penyiaran dirancang agar relevan secara kontekstual dengan standar industri kreatif perfilman saat ini.
+              Menjadi guru yang adaptif dalam menghadapi perubahan zaman, berintegritas dalam setiap tindakan, dan berkarakter dalam memberikan keteladanan nyata bagi peserta didik. Berdedikasi dalam menghadirkan pembelajaran kejuruan yang berpusat pada murid, bermakna (<em>meaningful</em>), serta menyenangkan (<em>joyful</em>). Melalui pendekatan <em>Teaching at the Right Level</em> (TaRL) dan <em>Culturally Responsive Teaching</em> (CRT), materi teknis pascaproduksi video dan penyiaran dirancang agar relevan secara kontekstual dengan standar industri kreatif perfilman saat ini.
             </div>
           </div>
         </div>
@@ -622,16 +589,14 @@
           <span>Analisis Artefak Mengajar</span>
         </div>
         <h2 class="text-2xl sm:text-4xl font-black text-white uppercase mt-1">
-          PPL Mandiri Topik 3: <span class="text-[#00eeff]">Broadcasting & Video Editing</span>
+          PPL Mandiri Topik 3: <span class="text-[#00eeff]">Broadcasting &amp; Video Editing</span>
         </h2>
         <p class="text-xs sm:text-sm text-slate-300 mt-1">
           Telaah kritis 6 komponen artefak pembelajaran Pascaproduksi Video menggunakan Adobe Premiere Pro di SMKN 1 Surabaya.
         </p>
       </div>
 
-      <!-- 6 Artefak Grid Topik 3 -->
       <div class="space-y-8">
-        
         <!-- Artefak 1 -->
         <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card">
           <div class="bg-[#242b38] px-5 py-3 border-b border-[#3f4859] flex items-center justify-between">
@@ -651,7 +616,7 @@
                 </a>
               </div>
             </div>
-            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] aspect-3-4 w-full max-w-sm mx-auto lg:max-w-none">
+            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] w-full max-w-sm mx-auto lg:max-w-none">
               <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 flex-shrink-0">
                 <span>embed_preview: Modul_Ajar.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
@@ -680,7 +645,7 @@
                 </a>
               </div>
             </div>
-            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] aspect-3-4 w-full max-w-sm mx-auto lg:max-w-none">
+            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] w-full max-w-sm mx-auto lg:max-w-none">
               <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 flex-shrink-0">
                 <span>embed_preview: Bahan_Ajar_Premiere.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
@@ -694,7 +659,7 @@
         <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card">
           <div class="bg-[#242b38] px-5 py-3 border-b border-[#3f4859] flex items-center justify-between">
             <span class="text-xs font-bold font-mono text-[#00eeff]">ARTEFAK 03 // MEDIA PEMBELAJARAN</span>
-            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#1f242d] text-slate-300">Software & Aset</span>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#1f242d] text-slate-300">Software &amp; Aset</span>
           </div>
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 items-center">
             <div class="lg:col-span-7 space-y-3 text-left">
@@ -704,24 +669,24 @@
               </p>
               <div class="flex flex-wrap gap-2 pt-2">
                 <span class="px-2.5 py-1 rounded bg-[#1f242d] text-[#00eeff] text-xs font-mono border border-[#00eeff]/30">Adobe Premiere Pro</span>
-                <span class="px-2.5 py-1 rounded bg-[#1f242d] text-slate-300 text-xs font-mono border border-[#3f4859]">Audio & Video Footage</span>
+                <span class="px-2.5 py-1 rounded bg-[#1f242d] text-slate-300 text-xs font-mono border border-[#3f4859]">Audio &amp; Video Footage</span>
                 <span class="px-2.5 py-1 rounded bg-[#1f242d] text-slate-300 text-xs font-mono border border-[#3f4859]">Timeline Sequence</span>
               </div>
             </div>
-            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col p-2 aspect-[3/4] aspect-3-4 w-full max-w-sm mx-auto lg:max-w-none">
+            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col p-2 aspect-[3/4] w-full max-w-sm mx-auto lg:max-w-none">
               <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 flex-shrink-0">
                 <span>UI_Preview: Adobe Premiere Pro Workspace</span>
                 <span class="text-[#00eeff]">ON AIR (3:4)</span>
               </div>
-              <div class="relative group cursor-pointer overflow-hidden rounded-lg border border-[#3f4859] w-full flex-grow">
+              <div class="relative group cursor-pointer overflow-hidden rounded-lg border border-[#3f4859] w-full flex-grow" onclick="openLightbox('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1200&q=80', 'Adobe Premiere Pro Video Editing Workspace')">
                 <img 
                   src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=700&q=80" 
                   alt="Adobe Premiere Interface Workspace" 
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  onerror="this.src='https://placehold.co/600x800/181c24/00eeff?text=Adobe+Premiere+Pro+Editing+Workspace'"
+                  onerror="this.src='https://placehold.co/600x800/181c24/00eeff?text=Adobe+Premiere+Pro+Workspace'"
                 >
                 <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <span class="text-xs font-mono font-bold text-white bg-[#00eeff]/80 px-3 py-1 rounded-full text-[#1f242d]">
+                  <span class="text-xs font-mono font-bold text-white bg-[#00eeff]/90 px-3 py-1 rounded-full text-[#1f242d]">
                     Klik Perbesar Workspace
                   </span>
                 </div>
@@ -740,7 +705,7 @@
             <div class="lg:col-span-7 space-y-3 text-left">
               <h3 class="text-lg font-bold text-white">Video Pelaksanaan Praktik Mengajar</h3>
               <p class="text-xs sm:text-sm text-slate-200 leading-relaxed text-justify">
-                Video pelaksanaan praktik mengajar mandiri merefleksikan keterlaksanaan sintaks pembelajaran yang aktif, di mana guru berhasil memberikan bimbingan teknis (*scaffolding*), memantau progres kerja siswa di setiap pertemuan, serta memfasilitasi proses refleksi dan umpan balik secara efektif.
+                Video pelaksanaan praktik mengajar mandiri merefleksikan keterlaksanaan sintaks pembelajaran yang aktif, di mana guru berhasil memberikan bimbingan teknis (<em>scaffolding</em>), memantau progres kerja siswa di setiap pertemuan, serta memfasilitasi proses refleksi dan umpan balik secara efektif.
               </p>
               <div class="pt-2">
                 <a href="https://drive.google.com/file/d/1SoEpughCh5IeiZJXjPypjbzyvjkS8ftp/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#00eeff] text-[#1f242d] font-bold text-xs shadow-neon hover:bg-white transition-all">
@@ -749,7 +714,7 @@
                 </a>
               </div>
             </div>
-            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] aspect-3-4 w-full max-w-sm mx-auto lg:max-w-none">
+            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] w-full max-w-sm mx-auto lg:max-w-none">
               <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 flex-shrink-0">
                 <span>video_player: Praktik_PPL.mp4</span>
                 <span class="text-[#00eeff]">VIDEO (3:4)</span>
@@ -769,7 +734,7 @@
             <div class="lg:col-span-7 space-y-3 text-left">
               <h3 class="text-lg font-bold text-white">Kegiatan Non-Mengajar</h3>
               <p class="text-xs sm:text-sm text-slate-200 leading-relaxed text-justify">
-                Dalam kegiatan non mengajar mahasiswa PPL bukan hanya melakukan praktik mengajar melainkan juga terlibat dalam kegiatan di luar praktik mengajar di dalam kelas. Tentunya saya juga telah melakukan kegiatan tersebut, di mana pada saat kegiatan lomba dalam memperingati hari kemerdekaan Indonesia, pada saat itu saya berpartisipasi dalam merumuskan perlombaan, memonitor timeline kegiatan yang nantinya akan dilaksanakan oleh peserta didik, dan juga melakukan monitoring selama kegiatan berlangsung.
+                Dalam kegiatan non-mengajar, mahasiswa PPL bukan hanya melakukan praktik di dalam kelas melainkan juga terlibat dalam berbagai kegiatan sekolah. Pada peringatan Hari Kemerdekaan Indonesia di SMKN 1 Surabaya, saya berpartisipasi dalam merumuskan teknis perlombaan, memonitor timeline kegiatan peserta didik, dan melakukan pengawasan jalannya kegiatan secara menyeluruh.
               </p>
               <div class="pt-2">
                 <a href="https://drive.google.com/file/d/1k2cZkXaJ1f8k3R8Y6TAMCk9rq4LPWe_W/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#00eeff] text-[#1f242d] font-bold text-xs shadow-neon hover:bg-white transition-all">
@@ -778,7 +743,7 @@
                 </a>
               </div>
             </div>
-            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] aspect-3-4 w-full max-w-sm mx-auto lg:max-w-none">
+            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] w-full max-w-sm mx-auto lg:max-w-none">
               <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 flex-shrink-0">
                 <span>embed_preview: Kegiatan_HUT_RI.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
@@ -792,7 +757,7 @@
         <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card">
           <div class="bg-[#242b38] px-5 py-3 border-b border-[#3f4859] flex items-center justify-between">
             <span class="text-xs font-bold font-mono text-[#00eeff]">ARTEFAK 06 // INSTRUMEN PENILAIAN</span>
-            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#1f242d] text-slate-300">Asesmen & LKPD</span>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#1f242d] text-slate-300">Asesmen &amp; LKPD</span>
           </div>
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 items-center">
             <div class="lg:col-span-7 space-y-3 text-left">
@@ -807,7 +772,7 @@
                 </a>
               </div>
             </div>
-            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] aspect-3-4 w-full max-w-sm mx-auto lg:max-w-none">
+            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] w-full max-w-sm mx-auto lg:max-w-none">
               <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 flex-shrink-0">
                 <span>embed_preview: Rubrik_Penilaian.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
@@ -816,7 +781,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -831,24 +795,22 @@
           UTS PPL: <span class="text-[#00eeff]">Topik 4 Siklus 1 Berpikir Komputasional</span>
         </h2>
         <p class="text-xs sm:text-sm text-slate-300 mt-1">
-          Evaluasi artefak pembelajaran logika inferensi, penalaran komputasional, TaRL diferensiasi 3 jenjang, dan CRT konteks Surabaya.
+          Evaluasi artefak pembelajaran logika inferensi, penalaran komputasional, diferensiasi 3 jenjang TaRL, dan konteks CRT Surabaya.
         </p>
       </div>
 
-      <!-- 6 Artefak UTS PPL -->
       <div class="space-y-8">
-        
         <!-- UTS Artefak 1 -->
         <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card">
           <div class="bg-[#242b38] px-5 py-3 border-b border-[#3f4859] flex items-center justify-between">
             <span class="text-xs font-bold font-mono text-[#00eeff]">UTS // ARTEFAK 01: MODUL AJAR</span>
-            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#1f242d] text-slate-300">PBL & TaRL</span>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#1f242d] text-slate-300">PBL &amp; TaRL</span>
           </div>
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 items-center">
             <div class="lg:col-span-7 space-y-3 text-left">
               <h3 class="text-lg font-bold text-white">Produk Rancangan/Perencanaan Pembelajaran</h3>
               <p class="text-xs sm:text-sm text-slate-200 leading-relaxed text-justify">
-                Modul ajar Informatika elemen Berpikir Komputasional telah disusun secara sistematis dengan memuat identitas pembelajaran, capaian pembelajaran, tujuan pembelajaran, materi, model, pendekatan, metode, kegiatan pembelajaran, asesmen, refleksi, remedial, pengayaan, bahan ajar, media ajar, serta LKPD. Materi yang dipilih meliputi proposisi, negasi, konjungsi, disjungsi, implikasi, serta penalaran deduktif, induktif, dan abduktif yang relevan dengan elemen Berpikir Komputasional dan sesuai dengan cakupan materi pada Buku Panduan Guru Informatika SMK/MAK Kelas X. Modul juga memiliki keunggulan karena mengintegrasikan Problem Based Learning (PBL), Teaching at the Right Level (TaRL), Culturally Responsive Teaching (CRT), dan prinsip pembelajaran mendalam sehingga pembelajaran dirancang berpusat pada peserta didik.
+                Modul ajar Informatika elemen Berpikir Komputasional telah disusun secara sistematis dengan memuat identitas pembelajaran, capaian pembelajaran, tujuan pembelajaran, materi, model, pendekatan, metode, kegiatan pembelajaran, asesmen, refleksi, remedial, pengayaan, bahan ajar, media ajar, serta LKPD. Materi yang dipilih meliputi proposisi, negasi, konjungsi, disjungsi, implikasi, serta penalaran deduktif, induktif, dan abduktif yang relevan dengan elemen Berpikir Komputasional dan sesuai dengan Buku Panduan Guru Informatika SMK/MAK Kelas X. Modul ini mengintegrasikan Problem-Based Learning (PBL), Teaching at the Right Level (TaRL), Culturally Responsive Teaching (CRT), dan prinsip Deep Learning.
               </p>
               <div class="pt-2">
                 <a href="https://drive.google.com/file/d/1P1xxXDFhnmDpyJ0iNokBaSWZf-LcYI6S/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#00eeff] text-[#1f242d] font-bold text-xs shadow-neon hover:bg-white transition-all">
@@ -857,7 +819,7 @@
                 </a>
               </div>
             </div>
-            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] aspect-3-4 w-full max-w-sm mx-auto lg:max-w-none">
+            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] w-full max-w-sm mx-auto lg:max-w-none">
               <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 flex-shrink-0">
                 <span>embed_preview: Modul_Ajar_BK.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
@@ -877,7 +839,7 @@
             <div class="lg:col-span-7 space-y-3 text-left">
               <h3 class="text-lg font-bold text-white">Materi Pembelajaran</h3>
               <p class="text-xs sm:text-sm text-slate-200 leading-relaxed text-justify">
-                Bahan ajar dalam modul ditempatkan sebagai salah satu lampiran dan secara fungsional seharusnya menjadi sumber belajar utama yang membantu peserta didik memahami materi sebelum mengerjakan LKPD. Berdasarkan struktur materi dalam modul dan Buku Panduan Guru, bahan ajar idealnya mencakup proposisi, negasi, konjungsi, disjungsi, implikasi, tabel kebenaran, penalaran deduktif, induktif, abduktif, dan inferensi. Buku Panduan Guru sendiri menempatkan materi-materi tersebut sebagai bagian utama dalam elemen Berpikir Komputasional.
+                Bahan ajar dalam modul ditempatkan sebagai salah satu lampiran dan secara fungsional menjadi sumber belajar utama yang membantu peserta didik memahami materi sebelum mengerjakan LKPD. Berdasarkan struktur materi dalam modul dan Buku Panduan Guru, bahan ajar mencakup materi proposisi, negasi, konjungsi, disjungsi, implikasi, tabel kebenaran, penalaran deduktif, induktif, abduktif, dan inferensi komputasional.
               </p>
               <div class="pt-2">
                 <a href="https://drive.google.com/file/d/1aAQbr34xis8ZaHfPHWxVlsXB-HZJQZK_/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#00eeff] text-[#1f242d] font-bold text-xs shadow-neon hover:bg-white transition-all">
@@ -886,7 +848,7 @@
                 </a>
               </div>
             </div>
-            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] aspect-3-4 w-full max-w-sm mx-auto lg:max-w-none">
+            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] w-full max-w-sm mx-auto lg:max-w-none">
               <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 flex-shrink-0">
                 <span>embed_preview: Bahan_Ajar_BK.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
@@ -906,7 +868,7 @@
             <div class="lg:col-span-7 space-y-3 text-left">
               <h3 class="text-lg font-bold text-white">Media Pembelajaran</h3>
               <p class="text-xs sm:text-sm text-slate-200 leading-relaxed text-justify">
-                Media ajar dalam modul dirancang menggunakan media presentasi Canva dan digunakan untuk mendukung proses orientasi masalah serta penyampaian materi. Penggunaan media tersebut sudah sesuai dengan kebutuhan pembelajaran Informatika karena Buku Panduan Guru juga merekomendasikan penggunaan komputer, proyektor, speaker, presentasi, dan video sebagai sarana pembelajaran. Kekuatan media dalam rancangan modul terletak pada fungsinya sebagai pemantik masalah dan pendukung visualisasi konsep.
+                Media ajar dalam modul dirancang menggunakan media presentasi Canva dan digunakan untuk mendukung proses orientasi masalah serta penyampaian materi. Penggunaan media tersebut disesuaikan dengan kebutuhan pembelajaran Informatika di mana visualisasi bagan logika, diagram alir, dan animasi interaktif membantu memantik rasa ingin tahu dan mempermudah pemahaman konsep abstrak siswa.
               </p>
               <div class="pt-2">
                 <a href="https://drive.google.com/file/d/1Z5fGzVPjoIiT8XxinXXb9JFoWII_sPAa/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#00eeff] text-[#1f242d] font-bold text-xs shadow-neon hover:bg-white transition-all">
@@ -915,7 +877,7 @@
                 </a>
               </div>
             </div>
-            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] aspect-3-4 w-full max-w-sm mx-auto lg:max-w-none">
+            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] w-full max-w-sm mx-auto lg:max-w-none">
               <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 flex-shrink-0">
                 <span>embed_preview: Media_Canva_BK.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
@@ -935,7 +897,7 @@
             <div class="lg:col-span-7 space-y-3 text-left">
               <h3 class="text-lg font-bold text-white">Video Pelaksanaan Praktik Mengajar</h3>
               <p class="text-xs sm:text-sm text-slate-200 leading-relaxed text-justify">
-                Pada video mengajar memperlihatkan kegiatan pembelajaran yang merujuk pada modul ajar yang sudah dibuat, yaitu salah satu sintaks pada model pembelajaran Problem Based Learning (PBL) di mana pada video yang saya rekam memperlihatkan kegiatan ketika peserta didik melakukan presentasi kelompok, sesuai dengan tugas yang sudah dibagikan kepada setiap masing-masing kelompok. Pada video presentasi juga berjalan lancar dan sesuai dengan apa yang saya inginkan.
+                Video mengajar merefleksikan kegiatan pembelajaran yang merujuk pada modul ajar yang telah dibuat, khususnya sintaks model Problem-Based Learning (PBL) fase presentasi dan evaluasi pemecahan masalah. Peserta didik berkolaborasi secara aktif, memaparkan hasil penalaran logika mereka, serta saling memberikan tanggapan antar kelompok.
               </p>
               <div class="pt-2">
                 <a href="https://drive.google.com/file/d/1ToxGAHYKp5M-94BNbYktdjjiBurcwNcE/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#00eeff] text-[#1f242d] font-bold text-xs shadow-neon hover:bg-white transition-all">
@@ -944,7 +906,7 @@
                 </a>
               </div>
             </div>
-            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] aspect-3-4 w-full max-w-sm mx-auto lg:max-w-none">
+            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] w-full max-w-sm mx-auto lg:max-w-none">
               <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 flex-shrink-0">
                 <span>video_player: Praktik_PBL_BK.mp4</span>
                 <span class="text-[#00eeff]">VIDEO (3:4)</span>
@@ -964,7 +926,7 @@
             <div class="lg:col-span-7 space-y-3 text-left">
               <h3 class="text-lg font-bold text-white">Kegiatan Non-Mengajar</h3>
               <p class="text-xs sm:text-sm text-slate-200 leading-relaxed text-justify">
-                Dalam kegiatan non mengajar mahasiswa PPL bukan hanya melakukan praktik mengajar melainkan juga berkontribusi pada kegiatan sekplah diluar jam pelajaran seperti hal nya yang sudah saya lakukan dalam hal ini yaitu, saya berkontribusi dalam menyiapkan acara perlombaan OSN yang dimana SMKN 1 Surabaya menjadi tuan rumah, sehinggan saya juga dilibatkan dalam mempersiapkan dan mengawasi jalanya acara OSN di SMKN 1 Surabaya.
+                Dalam kegiatan non-mengajar, mahasiswa PPL bukan hanya melakukan praktik mengajar melainkan juga berkontribusi pada kegiatan sekolah di luar jam pelajaran. Salah satu keterlibatan utama saya adalah kepanitiaan perlombaan Olimpiade Sains Nasional (OSN) di mana SMKN 1 Surabaya bertindak sebagai tuan rumah penyelenggara, sehingga saya dipercaya terlibat dalam persiapan teknis dan pengawasan pelaksanaan kegiatan.
               </p>
               <div class="pt-2">
                 <a href="https://drive.google.com/file/d/1yH7IPQR76b2df-FN_FY-dZ9bzxEIjdaC/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#00eeff] text-[#1f242d] font-bold text-xs shadow-neon hover:bg-white transition-all">
@@ -973,9 +935,9 @@
                 </a>
               </div>
             </div>
-            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] aspect-3-4 w-full max-w-sm mx-auto lg:max-w-none">
+            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] w-full max-w-sm mx-auto lg:max-w-none">
               <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 flex-shrink-0">
-                <span>embed_preview: Kegiatan_HUT_RI.pdf</span>
+                <span>embed_preview: Dokumentasi_OSN_SMKN1.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
               </div>
               <iframe src="https://drive.google.com/file/d/1yH7IPQR76b2df-FN_FY-dZ9bzxEIjdaC/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
@@ -993,7 +955,7 @@
             <div class="lg:col-span-7 space-y-3 text-left">
               <h3 class="text-lg font-bold text-white">Instrumen Penilaian</h3>
               <p class="text-xs sm:text-sm text-slate-200 leading-relaxed text-justify">
-                LKPD merupakan salah satu komponen yang paling kuat dalam modul karena telah dirancang secara berjenjang sesuai hasil asesmen diagnostik TaRL. LKPD kelompok dasar berfokus pada kemampuan mengenali proposisi, bukan proposisi, negasi, dan konjungsi; kelompok berkembang diarahkan pada disjungsi, implikasi, tabel kebenaran, dan perbandingan operator logika; sedangkan kelompok mahir diarahkan untuk menganalisis kasus melalui penalaran deduktif, induktif, dan abduktif serta menghubungkannya dengan penyusunan algoritma sederhana.
+                LKPD merupakan salah satu komponen paling kuat dalam modul karena dirancang berjenjang sesuai hasil asesmen diagnostik TaRL: kelompok dasar berfokus pada pengenalan proposisi dan negasi; kelompok berkembang diarahkan pada disjungsi, implikasi, dan tabel kebenaran; sedangkan kelompok mahir menganalisis studi kasus nyata menggunakan penalaran deduktif, induktif, dan abduktif yang dihubungkan dengan struktur algoritma.
               </p>
               <div class="pt-2">
                 <a href="https://drive.google.com/file/d/1pb-GlxzGKABombLW0IoC5gJEUy8oKijD/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#00eeff] text-[#1f242d] font-bold text-xs shadow-neon hover:bg-white transition-all">
@@ -1002,7 +964,7 @@
                 </a>
               </div>
             </div>
-            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] aspect-3-4 w-full max-w-sm mx-auto lg:max-w-none">
+            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] w-full max-w-sm mx-auto lg:max-w-none">
               <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 flex-shrink-0">
                 <span>embed_preview: Instrumen_LKPD_BK.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
@@ -1011,7 +973,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -1023,16 +984,14 @@
           <span>Evaluasi Portofolio Komprehensif</span>
         </div>
         <h2 class="text-2xl sm:text-4xl font-black text-white uppercase mt-1">
-          UAS PPL: <span class="text-[#00eeff]">Refleksi & Artefak Final PPL</span>
+          UAS PPL: <span class="text-[#00eeff]">Refleksi &amp; Artefak Final PPL</span>
         </h2>
         <p class="text-xs sm:text-sm text-slate-300 mt-1">
           Tinjauan komprehensif 6 artefak mengajar, evaluasi kompetensi pedagogik, serta Rencana Tindak Lanjut (RTL) keprofesian guru.
         </p>
       </div>
 
-      <!-- 6 Artefak UAS PPL Format 2 Kolom -->
       <div class="space-y-8">
-        
         <!-- UAS 1 -->
         <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card">
           <div class="bg-[#242b38] px-5 py-3 border-b border-[#3f4859] flex items-center justify-between">
@@ -1043,17 +1002,21 @@
             <div class="lg:col-span-7 space-y-3 text-left">
               <h3 class="text-lg font-bold text-white">Produk Rancangan/Perencanaan Pembelajaran</h3>
               <p class="text-xs sm:text-sm text-slate-200 leading-relaxed text-justify">
-                Penyempurnaan Modul Ajar Siklus Mandiri telah mengakomodasi seluruh masukan DPL dan Guru Pamong. Modul kini mengoptimalkan alokasi waktu 2 JP dengan fokus tajam pada alur produksi film/video, scaffolding terstruktur TaRL, serta integrasi sintaks Project-Based Learning yang menguatkan profil pelajar pancasila dan kemandirian berkarya.
+                Modul ajar yang disusun oleh Andrean Putra Fermana untuk mata pelajaran Teknik Grafika kelas XI ini dirancang dengan sangat rapi dan komprehensif, mengangkat tema besar "Perancangan Lini Produk Merchandise Pariwisata Budaya Jawa Timur" melalui model Project Based Learning (PjBL). Kekuatan utama modul ini terletak pada integrasi tiga pendekatan sekaligus, yaitu Teaching at the Right Level (TaRL) untuk mengakomodasi keberagaman kemampuan peserta didik (kelompok Mahir, Cakap, dan Berkembang), Culturally Responsive Teaching (CRT) yang mengaitkan materi dengan kekayaan budaya lokal Jawa Timur, serta prinsip Deep Learning (Mindful, Meaningful, dan Joyful Learning) yang tercermin jelas dalam setiap tahapan kegiatan. Modul ini juga dilengkapi instrumen asesmen yang detail (rubrik penilaian proses, produk, sikap, dan presentasi) serta rencana pengayaan dan remedial yang jelas, sehingga secara keseluruhan modul ini layak menjadi acuan pembelajaran yang berpihak pada peserta didik dan kontekstual dengan dunia kerja nyata sebagai desainer grafis.
               </p>
-            </div>
-            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] p-5 flex flex-col justify-between aspect-[3/4] aspect-3-4 w-full max-w-sm mx-auto lg:max-w-none">
-              <span class="text-[11px] font-mono text-[#00eeff] font-bold">STATUS KELENGKAPAN:</span>
-              <p class="text-xs text-slate-300 leading-relaxed">
-                Modul Ajar Final terintegrasi rubrik penilaian autentik, lembar refleksi diri siswa, dan petunjuk teknis pascaproduksi.
-              </p>
-              <div class="mt-4 pt-3 border-t border-[#3f4859] text-[11px] font-mono text-slate-400">
-                Status: 100% Disetujui (3:4)
+              <div class="pt-2">
+                <a href="https://drive.google.com/file/d/1ra4LTz-5HIjNSBZSn0JWA_8Y5wWsX982/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#00eeff] text-[#1f242d] font-bold text-xs shadow-neon hover:bg-white transition-all">
+                  <span>Buka File di Google Drive</span>
+                  <span>&nearr;</span>
+                </a>
               </div>
+            </div>
+            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] w-full max-w-sm mx-auto lg:max-w-none">
+              <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 flex-shrink-0">
+                <span>embed_preview: Modul_Ajar_UAS.pdf</span>
+                <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
+              </div>
+              <iframe src="https://drive.google.com/file/d/1ra4LTz-5HIjNSBZSn0JWA_8Y5wWsX982/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
             </div>
           </div>
         </div>
@@ -1068,17 +1031,21 @@
             <div class="lg:col-span-7 space-y-3 text-left">
               <h3 class="text-lg font-bold text-white">Materi Pembelajaran</h3>
               <p class="text-xs sm:text-sm text-slate-200 leading-relaxed text-justify">
-                Bahan ajar mandiri disusun dalam bentuk modul digital interaktif yang dilengkapi diagram alir pascaproduksi, panduan shortcut Adobe Premiere Pro, tabel standarisasi resolusi video (1080p, 4K), serta tips sinkronisasi multi-track audio. Bahan ajar mudah diakses siswa melalui smartphone maupun komputer lab.
+                Bahan ajar dalam bentuk Buku Kerja Guru ini menyajikan materi konseptual tentang desain cetak secara sistematis dan aplikatif, mencakup pengertian desain cetak, ragam produk cetak (brosur, poster, kartu nama, kemasan, hingga merchandise), serta elemen-elemen kunci seperti tipografi, warna, ilustrasi, tata letak, resolusi, dan mode warna CMYK yang menjadi standar industri percetakan. Materi ini disusun cukup lengkap karena juga menyertakan perbandingan mendasar antara desain cetak dan desain digital dari berbagai aspek (media, interaksi, resolusi, mode warna, tujuan penggunaan), sehingga peserta didik tidak hanya memahami teknik pembuatan desain tetapi juga konteks penerapannya. Bahan ajar ini relevan dan mendukung langsung tujuan modul ajar, karena memberikan fondasi pengetahuan teknis yang dibutuhkan peserta didik sebelum mereka menyusun design brief dan mulai mengeksplorasi visual produk merchandise.
               </p>
-            </div>
-            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] p-5 flex flex-col justify-between aspect-[3/4] aspect-3-4 w-full max-w-sm mx-auto lg:max-w-none">
-              <span class="text-[11px] font-mono text-[#00eeff] font-bold">AKSESIBILITAS SISWA:</span>
-              <p class="text-xs text-slate-300 leading-relaxed">
-                Dilengkapi barcode QR digital di setiap meja lab komputer untuk memudahkan referensi teknis saat proses editing mandiri.
-              </p>
-              <div class="mt-4 pt-3 border-t border-[#3f4859] text-[11px] font-mono text-slate-400">
-                Akses: QR Digital Lab (3:4)
+              <div class="pt-2">
+                <a href="https://drive.google.com/file/d/1M6A3FjOXstsuPHyK4WkkyK3egiVMeZGM/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#00eeff] text-[#1f242d] font-bold text-xs shadow-neon hover:bg-white transition-all">
+                  <span>Buka Bahan Ajar di Google Drive</span>
+                  <span>&nearr;</span>
+                </a>
               </div>
+            </div>
+            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] w-full max-w-sm mx-auto lg:max-w-none">
+              <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 flex-shrink-0">
+                <span>embed_preview: Bahan_Ajar_UAS.pdf</span>
+                <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
+              </div>
+              <iframe src="https://drive.google.com/file/d/1M6A3FjOXstsuPHyK4WkkyK3egiVMeZGM/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
             </div>
           </div>
         </div>
@@ -1093,17 +1060,21 @@
             <div class="lg:col-span-7 space-y-3 text-left">
               <h3 class="text-lg font-bold text-white">Media Pembelajaran</h3>
               <p class="text-xs sm:text-sm text-slate-200 leading-relaxed text-justify">
-                Media ajar menggabungkan tayangan interaktif Canva untuk apersepsi masalah dengan penyiapan folder aset rekaman mentah (raw footage), sound effect berlisensi Creative Commons, dan template lower-third kustom untuk memfasilitasi kreativitas siswa tanpa hambatan teknis sumber daya.
+                Media ajar berupa slide presentasi ini dirancang secara visual menarik dan komunikatif, menampilkan alur materi mulai dari pertanyaan pemantik, tujuan proyek, hingga tahapan kerja "One Destination, One Merchandise" yang disajikan dengan ikon dan infografis sederhana sehingga mudah dipahami peserta didik. Penyertaan contoh konkret seperti studi kasus "Sunset by the Sea" beserta gambaran produk jadi (tote bag, kaos, sticker) menjadi nilai tambah karena memberikan gambaran nyata dan inspiratif bagi peserta didik sebelum mereka merancang produk sendiri, sekaligus elemen ice breaking (meme troll face) yang menghadirkan unsur joyful learning. Secara umum, media ajar ini efektif sebagai alat bantu visual yang memperjelas instruksi modul ajar dan menjaga keterlibatan peserta didik selama proses pembelajaran di kelas.
               </p>
-            </div>
-            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] p-5 flex flex-col justify-between aspect-[3/4] aspect-3-4 w-full max-w-sm mx-auto lg:max-w-none">
-              <span class="text-[11px] font-mono text-[#00eeff] font-bold">KETERSEDIAAN ASET:</span>
-              <p class="text-xs text-slate-300 leading-relaxed">
-                Penyediaan aset footage lokal Surabaya memperkuat unsur Culturally Responsive Teaching (CRT) dalam penugasan karya video.
-              </p>
-              <div class="mt-4 pt-3 border-t border-[#3f4859] text-[11px] font-mono text-slate-400">
-                Media: Canva + Footage (3:4)
+              <div class="pt-2">
+                <a href="https://drive.google.com/file/d/1hcixwxHYuoee95PlRvfHmfB05JmSEmF7/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#00eeff] text-[#1f242d] font-bold text-xs shadow-neon hover:bg-white transition-all">
+                  <span>Buka Media di Google Drive</span>
+                  <span>&nearr;</span>
+                </a>
               </div>
+            </div>
+            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] w-full max-w-sm mx-auto lg:max-w-none">
+              <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 flex-shrink-0">
+                <span>embed_preview: Media_Ajar_UAS.pdf</span>
+                <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
+              </div>
+              <iframe src="https://drive.google.com/file/d/1hcixwxHYuoee95PlRvfHmfB05JmSEmF7/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
             </div>
           </div>
         </div>
@@ -1118,17 +1089,21 @@
             <div class="lg:col-span-7 space-y-3 text-left">
               <h3 class="text-lg font-bold text-white">Video Pelaksanaan Praktik Mengajar</h3>
               <p class="text-xs sm:text-sm text-slate-200 leading-relaxed text-justify">
-                Kompilasi video praktik mengajar mandiri siklus akhir menampilkan keterpaduan bimbingan kelompok kecil (*scaffolding differentiated instruction*), interaksi bermakna guru-siswa, manajemen waktu studio yang efektif, dan sesi screening karya video siswa dengan pemberian umpan balik konstruktif.
+                Video pembelajaran yang saya rekam sudah menunjukkan kesesuaian yang baik dengan Sintaks 2 (Mendesain Perencanaan Proyek) pada modul ajar. Peserta didik terlihat duduk berkelompok dan aktif berdiskusi mengisi LKPD Design Brief, sesuai instruksi modul untuk membentuk kelompok "creative agency" beranggotakan 5-6 siswa. Guru juga tampak berkeliling dan berpindah posisi mengarahkan perhatian ke tiap kelompok, mencerminkan penerapan pendampingan berjenjang (TaRL) sebagaimana dirancang dalam modul. Secara keseluruhan, praktik pembelajaran dalam video selaras dengan perencanaan yang tertuang dalam modul ajar, khususnya pada aspek pembentukan kelompok dan proses penyusunan design brief secara kolaboratif.
               </p>
-            </div>
-            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] p-5 flex flex-col justify-between aspect-[3/4] aspect-3-4 w-full max-w-sm mx-auto lg:max-w-none">
-              <span class="text-[11px] font-mono text-[#00eeff] font-bold">EVIDENSI KOMPETENSI:</span>
-              <p class="text-xs text-slate-300 leading-relaxed">
-                Merekam ketuntasan indikator pedagogik guru dalam membimbing kelompok siswa berkemampuan dasar hingga kelompok mahir.
-              </p>
-              <div class="mt-4 pt-3 border-t border-[#3f4859] text-[11px] font-mono text-slate-400">
-                Format: Video Refleksi (3:4)
+              <div class="pt-2">
+                <a href="https://drive.google.com/file/d/1-64wBHjdRQFUfszUYJ7kOZGxGdkDxvhB/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#00eeff] text-[#1f242d] font-bold text-xs shadow-neon hover:bg-white transition-all">
+                  <span>Tonton Video di Google Drive</span>
+                  <span>&nearr;</span>
+                </a>
               </div>
+            </div>
+            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] w-full max-w-sm mx-auto lg:max-w-none">
+              <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 flex-shrink-0">
+                <span>video_player: Praktik_UAS.mp4</span>
+                <span class="text-[#00eeff]">VIDEO (3:4)</span>
+              </div>
+              <iframe src="https://drive.google.com/file/d/1-64wBHjdRQFUfszUYJ7kOZGxGdkDxvhB/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
             </div>
           </div>
         </div>
@@ -1143,17 +1118,21 @@
             <div class="lg:col-span-7 space-y-3 text-left">
               <h3 class="text-lg font-bold text-white">Kegiatan Non-Mengajar</h3>
               <p class="text-xs sm:text-sm text-slate-200 leading-relaxed text-justify">
-                Keterlibatan menyeluruh dalam kegiatan non-mengajar meliputi kepanitiaan peringatan hari kemerdekaan RI, piket kedisiplinan 5S, pembinaan ekstrakurikuler broadcast/cinematography, serta kolaborasi manajemen lab bersama tim teknisi sekolah.
+                Kegiatan piket sekolah merupakan bagian dari tugas tambahan guru di luar jam mengajar yang mencerminkan dimensi tanggung jawab profesional dan kontribusi terhadap keberlangsungan operasional sekolah secara menyeluruh, seperti pengawasan ketertiban siswa, kedisiplinan, dan kelancaran kegiatan harian di lingkungan sekolah. Keterlibatan aktif dalam piket dan kegiatan sekolah menunjukkan komitmen guru terhadap peran kolektif dalam ekosistem sekolah, sekaligus menjadi wujud nyata dari nilai gotong royong dan kedisiplinan yang diajarkan kepada peserta didik.
               </p>
-            </div>
-            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] p-5 flex flex-col justify-between aspect-[3/4] aspect-3-4 w-full max-w-sm mx-auto lg:max-w-none">
-              <span class="text-[11px] font-mono text-[#00eeff] font-bold">DAMPAK KESISWAAN:</span>
-              <p class="text-xs text-slate-300 leading-relaxed">
-                Membangun kedekatan emosional dan keteladanan dengan peserta didik di luar jam pelajaran formal di kelas.
-              </p>
-              <div class="mt-4 pt-3 border-t border-[#3f4859] text-[11px] font-mono text-slate-400">
-                Cakupan: Ekosistem Sekolah (3:4)
+              <div class="pt-2">
+                <a href="https://drive.google.com/file/d/1MKfatB1oz7ngVXMEoZimUB37pS1ECvel/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#00eeff] text-[#1f242d] font-bold text-xs shadow-neon hover:bg-white transition-all">
+                  <span>Buka Dokumentasi di Google Drive</span>
+                  <span>&nearr;</span>
+                </a>
               </div>
+            </div>
+            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] w-full max-w-sm mx-auto lg:max-w-none">
+              <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 flex-shrink-0">
+                <span>embed_preview: Kegiatan_Non_Mengajar.pdf</span>
+                <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
+              </div>
+              <iframe src="https://drive.google.com/file/d/1MKfatB1oz7ngVXMEoZimUB37pS1ECvel/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
             </div>
           </div>
         </div>
@@ -1161,28 +1140,31 @@
         <!-- UAS 6 -->
         <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card">
           <div class="bg-[#242b38] px-5 py-3 border-b border-[#3f4859] flex items-center justify-between">
-            <span class="text-xs font-bold font-mono text-[#00eeff]">UAS // ARTEFAK 06: EVALUASI & RTL</span>
+            <span class="text-xs font-bold font-mono text-[#00eeff]">UAS // ARTEFAK 06: EVALUASI &amp; RTL</span>
             <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#1f242d] text-[#00eeff]">HASIL ASESMEN</span>
           </div>
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 items-center">
             <div class="lg:col-span-7 space-y-3 text-left">
-              <h3 class="text-lg font-bold text-white">Instrumen Penilaian & Rencana Tindak Lanjut</h3>
+              <h3 class="text-lg font-bold text-white">Instrumen Penilaian &amp; Rencana Tindak Lanjut</h3>
               <p class="text-xs sm:text-sm text-slate-200 leading-relaxed text-justify">
-                Analisis instrumen sumatif menunjukkan tingkat ketuntasan hasil belajar siswa mencapai 88,5%. Berdasarkan hasil evaluasi ini, disusun Rencana Tindak Lanjut (RTL) berupa pengembangan bank proyek kreatif siaran, penguatan modul kolaboratif lintas mata pelajaran, serta sertifikasi kompetensi industri guru secara berkelanjutan.
+                LKPD Design Brief ini dirancang dengan tampilan yang atraktif dan terstruktur, memuat delapan komponen penting yang harus diisi kelompok, yaitu daerah pilihan, jenis wisata, ikon dan elemen visual khas, target audiens, tujuan dan pesan desain, gaya visual awal, jenis produk merchandise, serta pembagian peran anggota kelompok. Format tabel dua kolom memudahkan peserta didik menuangkan hasil diskusi secara sistematis, sementara desain grafis yang menarik menjadikan LKPD ini instrumen kunci untuk memastikan setiap kelompok memiliki perencanaan proyek yang terukur sebelum masuk ke tahap produksi akhir.
               </p>
-            </div>
-            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] p-5 flex flex-col justify-between aspect-[3/4] aspect-3-4 w-full max-w-sm mx-auto lg:max-w-none">
-              <span class="text-[11px] font-mono text-[#00eeff] font-bold">KETUNTASAN BELAJAR:</span>
-              <p class="text-xs text-slate-300 leading-relaxed">
-                Ketuntasan klasikal: 88,5% • RTL: Pengembangan materi color grading & sound engineering tingkat lanjut.
-              </p>
-              <div class="mt-4 pt-3 border-t border-[#3f4859] text-[11px] font-mono text-slate-400">
-                Capaian: Sangat Memuaskan (3:4)
+              <div class="pt-2">
+                <a href="https://drive.google.com/file/d/1wgp7WjYrEWUU1Y-y-ofOgZ3raZVIv7iN/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#00eeff] text-[#1f242d] font-bold text-xs shadow-neon hover:bg-white transition-all">
+                  <span>Buka Instrumen di Google Drive</span>
+                  <span>&nearr;</span>
+                </a>
               </div>
+            </div>
+            <div class="lg:col-span-5 bg-[#181c24] rounded-xl border border-[#3f4859] overflow-hidden flex flex-col aspect-[3/4] w-full max-w-sm mx-auto lg:max-w-none">
+              <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 flex-shrink-0">
+                <span>embed_preview: Instrumen_Penilaian_UAS.pdf</span>
+                <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
+              </div>
+              <iframe src="https://drive.google.com/file/d/1wgp7WjYrEWUU1Y-y-ofOgZ3raZVIv7iN/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -1197,142 +1179,141 @@
           Dokumentasi Kegiatan <span class="text-[#00eeff]">PPL Mandiri</span>
         </h2>
         <p class="text-xs sm:text-sm text-slate-300 mt-1">
-          Dokumentasi visual aktivitas praktik mengajar di studio/lab, kegiatan kesiswaan, dan bimbingan bersama DPL & Guru Pamong.
+          Dokumentasi visual aktivitas praktik mengajar di studio/lab, kegiatan kesiswaan, dan bimbingan bersama DPL &amp; Guru Pamong. Klik foto untuk memperbesar.
         </p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-        
         <!-- Embed 1 (3:4) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1WArzWYBMJ5GBL5fC05XCWoiRgjhgn3BK', 'Dokumentasi 01 - Praktik Studio')">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 01</span>
             <span class="text-[#00eeff]">3:4</span>
           </div>
-          <div class="relative w-full aspect-[3/4] aspect-3-4 rounded-xl overflow-hidden bg-[#181c24] border border-[#3f4859]/60">
+          <div class="relative w-full aspect-[3/4] rounded-xl overflow-hidden bg-[#181c24] border border-[#3f4859]/60">
             <img 
               src="https://lh3.googleusercontent.com/d/1WArzWYBMJ5GBL5fC05XCWoiRgjhgn3BK" 
               alt="Dokumentasi 01" 
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=1WArzWYBMJ5GBL5fC05XCWoiRgjhgn3BK&sz=w1000';"
             >
           </div>
         </div>
 
         <!-- Embed 2 (3:4) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1IwHfOnHC2YEXmW979uoMZtswSliPS0n0', 'Dokumentasi 02 - Aktivitas Mengajar')">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 02</span>
             <span class="text-[#00eeff]">3:4</span>
           </div>
-          <div class="relative w-full aspect-[3/4] aspect-3-4 rounded-xl overflow-hidden bg-[#181c24] border border-[#3f4859]/60">
+          <div class="relative w-full aspect-[3/4] rounded-xl overflow-hidden bg-[#181c24] border border-[#3f4859]/60">
             <img 
               src="https://lh3.googleusercontent.com/d/1IwHfOnHC2YEXmW979uoMZtswSliPS0n0" 
               alt="Dokumentasi 02" 
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=1IwHfOnHC2YEXmW979uoMZtswSliPS0n0&sz=w1000';"
             >
           </div>
         </div>
 
         <!-- Embed 3 (3:4) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1hvIzJRR7MZRpHX6D8IfBcL3wiEZpEDGK', 'Dokumentasi 03 - Bimbingan Teknis Lab')">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 03</span>
             <span class="text-[#00eeff]">3:4</span>
           </div>
-          <div class="relative w-full aspect-[3/4] aspect-3-4 rounded-xl overflow-hidden bg-[#181c24] border border-[#3f4859]/60">
+          <div class="relative w-full aspect-[3/4] rounded-xl overflow-hidden bg-[#181c24] border border-[#3f4859]/60">
             <img 
               src="https://lh3.googleusercontent.com/d/1hvIzJRR7MZRpHX6D8IfBcL3wiEZpEDGK" 
               alt="Dokumentasi 03" 
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=1hvIzJRR7MZRpHX6D8IfBcL3wiEZpEDGK&sz=w1000';"
             >
           </div>
         </div>
 
         <!-- Embed 4 (3:4) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1D9hYvjKecHopTk8eBaiZ_sSoeSVTGOm5', 'Dokumentasi 04 - Diskusi Proyek')">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 04</span>
             <span class="text-[#00eeff]">3:4</span>
           </div>
-          <div class="relative w-full aspect-[3/4] aspect-3-4 rounded-xl overflow-hidden bg-[#181c24] border border-[#3f4859]/60">
+          <div class="relative w-full aspect-[3/4] rounded-xl overflow-hidden bg-[#181c24] border border-[#3f4859]/60">
             <img 
               src="https://lh3.googleusercontent.com/d/1D9hYvjKecHopTk8eBaiZ_sSoeSVTGOm5" 
               alt="Dokumentasi 04" 
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=1D9hYvjKecHopTk8eBaiZ_sSoeSVTGOm5&sz=w1000';"
             >
           </div>
         </div>
 
         <!-- Embed 5 (3:4) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1YxVDQ-hJ-LVPfOzPLwpV6PjkQwo1scQs', 'Dokumentasi 05 - Pembelajaran Kelas')">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 05</span>
             <span class="text-[#00eeff]">3:4</span>
           </div>
-          <div class="relative w-full aspect-[3/4] aspect-3-4 rounded-xl overflow-hidden bg-[#181c24] border border-[#3f4859]/60">
+          <div class="relative w-full aspect-[3/4] rounded-xl overflow-hidden bg-[#181c24] border border-[#3f4859]/60">
             <img 
               src="https://lh3.googleusercontent.com/d/1YxVDQ-hJ-LVPfOzPLwpV6PjkQwo1scQs" 
               alt="Dokumentasi 05" 
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=1YxVDQ-hJ-LVPfOzPLwpV6PjkQwo1scQs&sz=w1000';"
             >
           </div>
         </div>
 
         <!-- Embed 6 (3:4) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1gIiaoB0csAhg-AS3qXXjku2W4DFo_Qz8', 'Dokumentasi 06 - Kolaborasi Peserta Didik')">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 06</span>
             <span class="text-[#00eeff]">3:4</span>
           </div>
-          <div class="relative w-full aspect-[3/4] aspect-3-4 rounded-xl overflow-hidden bg-[#181c24] border border-[#3f4859]/60">
+          <div class="relative w-full aspect-[3/4] rounded-xl overflow-hidden bg-[#181c24] border border-[#3f4859]/60">
             <img 
               src="https://lh3.googleusercontent.com/d/1gIiaoB0csAhg-AS3qXXjku2W4DFo_Qz8" 
               alt="Dokumentasi 06" 
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=1gIiaoB0csAhg-AS3qXXjku2W4DFo_Qz8&sz=w1000';"
             >
           </div>
         </div>
 
         <!-- Embed 7 (3:4) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1vyUGRe14xD80lPr8I2FR38YRJzatLTrY', 'Dokumentasi 07 - Praktikum Editing')">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 07</span>
             <span class="text-[#00eeff]">3:4</span>
           </div>
-          <div class="relative w-full aspect-[3/4] aspect-3-4 rounded-xl overflow-hidden bg-[#181c24] border border-[#3f4859]/60">
+          <div class="relative w-full aspect-[3/4] rounded-xl overflow-hidden bg-[#181c24] border border-[#3f4859]/60">
             <img 
               src="https://lh3.googleusercontent.com/d/1vyUGRe14xD80lPr8I2FR38YRJzatLTrY" 
               alt="Dokumentasi 07" 
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=1vyUGRe14xD80lPr8I2FR38YRJzatLTrY&sz=w1000';"
             >
           </div>
         </div>
 
         <!-- Embed 8 (3:4) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1MKfatB1oz7ngVXMEoZimUB37pS1ECvel', 'Dokumentasi 08 - Monitoring Kelompok')">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 08</span>
             <span class="text-[#00eeff]">3:4</span>
           </div>
-          <div class="relative w-full aspect-[3/4] aspect-3-4 rounded-xl overflow-hidden bg-[#181c24] border border-[#3f4859]/60">
+          <div class="relative w-full aspect-[3/4] rounded-xl overflow-hidden bg-[#181c24] border border-[#3f4859]/60">
             <img 
               src="https://lh3.googleusercontent.com/d/1MKfatB1oz7ngVXMEoZimUB37pS1ECvel" 
               alt="Dokumentasi 08" 
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=1MKfatB1oz7ngVXMEoZimUB37pS1ECvel&sz=w1000';"
             >
           </div>
         </div>
 
         <!-- Embed 9 (4:3) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1CIfg0-tt2hxXifmilkMqu8naEd73GYx0', 'Dokumentasi 09 - Bimbingan DPL & Guru Pamong')">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 09</span>
             <span class="text-[#00eeff]">4:3</span>
@@ -1341,14 +1322,14 @@
             <img 
               src="https://lh3.googleusercontent.com/d/1CIfg0-tt2hxXifmilkMqu8naEd73GYx0" 
               alt="Dokumentasi 09" 
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=1CIfg0-tt2hxXifmilkMqu8naEd73GYx0&sz=w1000';"
             >
           </div>
         </div>
 
         <!-- Embed 10 (4:3) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1g58RbUHmwGcLgB3E9PbqDnXkEoKqaxBL', 'Dokumentasi 10 - Kegiatan Kesiswaan & Non-Mengajar')">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 10</span>
             <span class="text-[#00eeff]">4:3</span>
@@ -1357,14 +1338,14 @@
             <img 
               src="https://lh3.googleusercontent.com/d/1g58RbUHmwGcLgB3E9PbqDnXkEoKqaxBL" 
               alt="Dokumentasi 10" 
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=1g58RbUHmwGcLgB3E9PbqDnXkEoKqaxBL&sz=w1000';"
             >
           </div>
         </div>
 
         <!-- Embed 11 (4:3) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1EQvE8D68mFU9votKGmEhuFdEHXCKlO1N', 'Dokumentasi 11 - Evaluasi & Refleksi')">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 11</span>
             <span class="text-[#00eeff]">4:3</span>
@@ -1373,16 +1354,15 @@
             <img 
               src="https://lh3.googleusercontent.com/d/1EQvE8D68mFU9votKGmEhuFdEHXCKlO1N" 
               alt="Dokumentasi 11" 
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=1EQvE8D68mFU9votKGmEhuFdEHXCKlO1N&sz=w1000';"
             >
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- Bottom Pagination Card (Bilah Navigasi Bawah) -->
+    <!-- Bottom Pagination Card -->
     <div id="bottom-pagination-card" class="mt-12 bg-[#181c24]/90 backdrop-blur-md border border-[#3f4859] rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-card">
       <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
         <button 
@@ -1418,7 +1398,7 @@
 
   </main>
 
-  <!-- Floating Quick-Navigation Pill di Pojok Kanan Bawah -->
+  <!-- Floating Quick-Navigation Pill -->
   <div class="fixed bottom-6 right-6 z-40 flex items-center gap-2 bg-[#181c24]/95 backdrop-blur-md p-1.5 rounded-full border border-[#00eeff]/50 shadow-neon hover:shadow-neon-lg hover:border-[#00eeff] transition-all duration-300">
     <button 
       id="floating-prev-btn"
@@ -1445,6 +1425,17 @@
     </button>
   </div>
 
+  <!-- Interactive Lightbox Modal -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden opacity-0 flex items-center justify-center p-4 transition-opacity duration-300" onclick="closeLightbox(event)">
+    <div class="relative max-w-5xl max-h-[90vh] flex flex-col items-center" onclick="event.stopPropagation()">
+      <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-slate-300 hover:text-[#00eeff] text-2xl font-bold transition-colors">
+        ✕
+      </button>
+      <img id="lightbox-img" src="" alt="Preview" class="max-w-full max-h-[80vh] rounded-xl border border-[#00eeff]/40 shadow-2xl object-contain">
+      <p id="lightbox-caption" class="text-xs font-mono text-slate-300 mt-3 text-center"></p>
+    </div>
+  </div>
+
   <!-- Footer Minimalis -->
   <footer class="mt-auto border-t border-[#323946] py-6 text-center text-xs text-slate-400 font-mono">
     <p>&copy; 2026 Portofolio PPL PPG Prajabatan • SMK Negeri 1 Surabaya</p>
@@ -1464,7 +1455,7 @@
     const tabKeys = tabList.map(t => t.id);
     let currentTabIndex = 0;
 
-    // Trigger laser sweep animation at the top
+    // Laser sweep bar trigger
     function triggerLaserEffect() {
       const laser = document.getElementById('tab-laser-bar');
       if (!laser) return;
@@ -1484,7 +1475,7 @@
       });
     }
 
-    // Open & Close Sidebar Drawer
+    // Sidebar Controls
     function openSidebar() {
       const drawer = document.getElementById('sidebar-drawer');
       const backdrop = document.getElementById('sidebar-backdrop');
@@ -1511,7 +1502,28 @@
       }
     }
 
-    // Switch Tab with Directional Animation
+    // Lightbox Controls
+    function openLightbox(src, caption) {
+      const modal = document.getElementById('lightbox-modal');
+      const img = document.getElementById('lightbox-img');
+      const cap = document.getElementById('lightbox-caption');
+      if (modal && img) {
+        img.src = src;
+        if (cap) cap.innerText = caption || '';
+        modal.classList.remove('hidden');
+        setTimeout(() => modal.classList.remove('opacity-0'), 10);
+      }
+    }
+
+    function closeLightbox(e) {
+      const modal = document.getElementById('lightbox-modal');
+      if (modal) {
+        modal.classList.add('opacity-0');
+        setTimeout(() => modal.classList.add('hidden'), 300);
+      }
+    }
+
+    // Switch Tab
     function switchTab(tabId) {
       const targetIdx = tabList.findIndex(t => t.id === tabId);
       const prevIdx = currentTabIndex;
@@ -1540,7 +1552,6 @@
 
       triggerLaserEffect();
 
-      // Trigger pop animation on floating badge
       const badge = document.getElementById('floating-step-badge');
       if (badge) {
         badge.classList.remove('badge-pop');
@@ -1548,7 +1559,6 @@
         badge.classList.add('badge-pop');
       }
 
-      // Update active state in sidebar
       tabKeys.forEach(key => {
         const sideBtn = document.getElementById('sidebar-btn-' + key);
         if (!sideBtn) return;
@@ -1564,7 +1574,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Update bottom pagination and floating dock
+    // Update Pagination & Controls
     function updatePaginationControls() {
       const prevBtn = document.getElementById('btn-prev-tab');
       const nextBtn = document.getElementById('btn-next-tab');
@@ -1591,7 +1601,6 @@
         floatBadge.innerText = `${current + 1}/${total}`;
       }
 
-      // Previous button state
       if (current > 0) {
         const prevItem = tabList[current - 1];
         if (prevBtn) prevBtn.disabled = false;
@@ -1603,7 +1612,6 @@
         if (prevLabel) prevLabel.innerText = '-';
       }
 
-      // Next button state
       if (current < total - 1) {
         const nextItem = tabList[current + 1];
         if (nextBtn) nextBtn.disabled = false;
@@ -1616,7 +1624,6 @@
       }
     }
 
-    // Navigation triggers
     function goToPrevTab() {
       if (currentTabIndex > 0) {
         switchTab(tabList[currentTabIndex - 1].id);
@@ -1629,10 +1636,11 @@
       }
     }
 
-    // Keyboard navigation (Alt + Left/Right Arrow)
+    // Keyboard navigation
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') {
         closeSidebar();
+        closeLightbox();
       }
       if (e.altKey && e.key === 'ArrowLeft') {
         goToPrevTab();
@@ -1642,7 +1650,6 @@
       }
     });
 
-    // Initialize on window load
     window.onload = function () {
       switchTab('home');
     };
