@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portofolio PPL Mandiri - Broadcasting &amp; Perfilman</title>
+  
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
   <!-- Google Fonts Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -184,10 +186,9 @@
   <!-- Neon Laser Sweep Bar -->
   <div id="tab-laser-bar" class="opacity-0"></div>
 
-  <!-- Top Minimalist Bar -->
-  <header class="sticky top-0 z-40 bg-[#1f242d]/85 backdrop-blur-md border-b border-[#323946]/80 px-4 sm:px-8 py-3.5 flex items-center justify-between">
+  <header class="sticky top-0 z-40 bg-[#1f242d]/90 backdrop-blur-md border-b border-[#323946]/80 px-4 sm:px-8 py-3.5 flex items-center justify-between">
     <!-- Brand Logo -->
-    <a href="javascript:void(0)" onclick="switchTab('home')" class="flex items-center gap-2 group">
+    <a href="javascript:void(0)" onclick="switchTab('home')" class="flex items-center gap-2 group cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#00eeff] rounded-lg">
       <span class="text-xl sm:text-2xl font-black tracking-tight text-white group-hover:text-[#00eeff] transition-colors">
         Portfolio<span class="text-[#00eeff] glow-cyan">.</span>
       </span>
@@ -209,7 +210,7 @@
       <button 
         onclick="openSidebar()" 
         class="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-[#1f242d] bg-[#00eeff] shadow-neon hover:shadow-neon-lg active:scale-95 transition-all duration-200"
-        aria-label="Buka Menu"
+        aria-label="Buka Menu Navigasi"
       >
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -222,7 +223,6 @@
   <!-- Sidebar Backdrop -->
   <div id="sidebar-backdrop" onclick="closeSidebar()" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300"></div>
 
-  <!-- Off-Canvas Sidebar Drawer -->
   <aside id="sidebar-drawer" class="fixed top-0 right-0 h-full w-80 sm:w-96 bg-[#181c24] border-l border-[#00eeff]/30 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-out flex flex-col p-6">
     <div class="flex items-center justify-between pb-5 border-b border-[#323946]">
       <div>
@@ -234,8 +234,8 @@
       </button>
     </div>
 
-    <nav class="flex-1 py-6 space-y-2.5 overflow-y-auto">
-      <button id="sidebar-btn-home" onclick="switchTab('home')" class="sidebar-nav-item w-full flex items-center justify-between px-3.5 py-3 rounded-xl text-xs font-bold transition-all text-left">
+    <nav class="flex-1 py-6 space-y-2.5 overflow-y-auto" role="tablist">
+      <button id="sidebar-btn-home" onclick="switchTab('home')" role="tab" class="sidebar-nav-item w-full flex items-center justify-between px-3.5 py-3 rounded-xl text-xs font-bold transition-all text-left">
         <span class="flex items-center gap-3">
           <span class="w-2 h-2 rounded-full bg-[#00eeff]"></span>
           <span>Home (Beranda)</span>
@@ -243,7 +243,7 @@
         <span class="text-[10px] font-mono text-slate-400">01</span>
       </button>
 
-      <button id="sidebar-btn-profile" onclick="switchTab('profile')" class="sidebar-nav-item w-full flex items-center justify-between px-3.5 py-3 rounded-xl text-xs font-semibold transition-all text-left">
+      <button id="sidebar-btn-profile" onclick="switchTab('profile')" role="tab" class="sidebar-nav-item w-full flex items-center justify-between px-3.5 py-3 rounded-xl text-xs font-semibold transition-all text-left">
         <span class="flex items-center gap-3">
           <span class="w-2 h-2 rounded-full bg-[#00eeff]"></span>
           <span>Tentang Saya</span>
@@ -251,7 +251,7 @@
         <span class="text-[10px] font-mono text-slate-400">02</span>
       </button>
 
-      <button id="sidebar-btn-topik3" onclick="switchTab('topik3')" class="sidebar-nav-item w-full flex items-center justify-between px-3.5 py-3 rounded-xl text-xs font-semibold transition-all text-left">
+      <button id="sidebar-btn-topik3" onclick="switchTab('topik3')" role="tab" class="sidebar-nav-item w-full flex items-center justify-between px-3.5 py-3 rounded-xl text-xs font-semibold transition-all text-left">
         <span class="flex items-center gap-3">
           <span class="w-2 h-2 rounded-full bg-[#00eeff]"></span>
           <span>Topik 3 PPL Mandiri</span>
@@ -259,7 +259,7 @@
         <span class="text-[10px] font-mono text-slate-400">03</span>
       </button>
 
-      <button id="sidebar-btn-topik4" onclick="switchTab('topik4')" class="sidebar-nav-item w-full flex items-center justify-between px-3.5 py-3 rounded-xl text-xs font-semibold transition-all text-left">
+      <button id="sidebar-btn-topik4" onclick="switchTab('topik4')" role="tab" class="sidebar-nav-item w-full flex items-center justify-between px-3.5 py-3 rounded-xl text-xs font-semibold transition-all text-left">
         <span class="flex items-center gap-3">
           <span class="w-2 h-2 rounded-full bg-[#00eeff]"></span>
           <span>UTS PPL (Topik 4)</span>
@@ -267,7 +267,7 @@
         <span class="text-[10px] font-mono text-slate-400">04</span>
       </button>
 
-      <button id="sidebar-btn-uas" onclick="switchTab('uas')" class="sidebar-nav-item w-full flex items-center justify-between px-3.5 py-3 rounded-xl text-xs font-semibold transition-all text-left">
+      <button id="sidebar-btn-uas" onclick="switchTab('uas')" role="tab" class="sidebar-nav-item w-full flex items-center justify-between px-3.5 py-3 rounded-xl text-xs font-semibold transition-all text-left">
         <span class="flex items-center gap-3">
           <span class="w-2 h-2 rounded-full bg-[#00eeff]"></span>
           <span>UAS PPL</span>
@@ -275,7 +275,7 @@
         <span class="text-[10px] font-mono text-slate-400">05</span>
       </button>
 
-      <button id="sidebar-btn-dokumentasi" onclick="switchTab('dokumentasi')" class="sidebar-nav-item w-full flex items-center justify-between px-3.5 py-3 rounded-xl text-xs font-semibold transition-all text-left">
+      <button id="sidebar-btn-dokumentasi" onclick="switchTab('dokumentasi')" role="tab" class="sidebar-nav-item w-full flex items-center justify-between px-3.5 py-3 rounded-xl text-xs font-semibold transition-all text-left">
         <span class="flex items-center gap-3">
           <span class="w-2 h-2 rounded-full bg-[#00eeff]"></span>
           <span>Dokumentasi Kegiatan</span>
@@ -292,7 +292,7 @@
   <main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
     <!-- TAB 1: HOME -->
-    <section id="section-home" class="tab-section active anim-fade-scale">
+    <section id="section-home" class="tab-section active anim-fade-scale" role="tabpanel">
       <!-- Hero Banner -->
       <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#1b2029] via-[#242b38] to-[#1a1f28] border border-[#3f4859]/70 shadow-2xl p-6 sm:p-10 lg:p-14 mb-10">
         <div class="absolute -top-24 -right-24 w-96 h-96 bg-[#00eeff]/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -311,10 +311,10 @@
               </span>
             </h1>
 
-            <div class="border-l-4 border-[#00eeff] pl-4 py-1">
-              <h2 class="text-lg sm:text-xl font-bold text-slate-100">Broadcasting dan Perfilman</h2>
-              <p class="text-sm text-slate-300 mt-1 max-w-2xl leading-relaxed">
-                Dokumentasi &amp; Refleksi Pembelajaran Berbasis Prinsip Pembelajaran Mendalam (Deep Learning), mengintegrasikan pendekatan Teaching at the Right Level (TaRL) dan Culturally Responsive Teaching (CRT), serta model Project-Based Learning (PjBL) dan Problem-Based Learning (PBL) di SMK Negeri 1 Surabaya.
+            <div class="border-l-4 border-[#00eeff] pl-4 py-2">
+              <h2 class="text-xl sm:text-2xl font-black text-[#00eeff] tracking-wide">Broadcasting dan Perfilman</h2>
+              <p class="text-lg sm:text-2xl lg:text-3xl font-black text-white mt-2 max-w-3xl leading-snug tracking-tight">
+                Menjadi guru yang adaptif dalam menghadapi perubahan zaman, berintegritas dalam setiap tindakan, dan berkarakter dalam memberikan keteladanan nyata bagi peserta didik.
               </p>
             </div>
 
@@ -449,7 +449,7 @@
     </section>
 
     <!-- TAB 2: TENTANG SAYA -->
-    <section id="section-profile" class="tab-section">
+    <section id="section-profile" class="tab-section" role="tabpanel">
       <div class="bg-[#323946] rounded-3xl border border-[#3f4859] p-6 sm:p-10 shadow-card mb-8">
         <div class="flex flex-col lg:flex-row items-center gap-10">
           <!-- Profile Photo Frame (3:4 Portrait) -->
@@ -582,7 +582,7 @@
     </section>
 
     <!-- TAB 3: TOPIK 3 PPL MANDIRI -->
-    <section id="section-topik3" class="tab-section">
+    <section id="section-topik3" class="tab-section" role="tabpanel">
       <div class="mb-8 border-b border-[#323946] pb-4">
         <div class="flex items-center gap-2 text-xs font-mono font-bold text-[#00eeff] uppercase">
           <span class="w-2 h-2 rounded-full bg-[#00eeff]"></span>
@@ -621,7 +621,7 @@
                 <span>embed_preview: Modul_Ajar.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
               </div>
-              <iframe src="https://drive.google.com/file/d/1JyL3wsM0CwGncwPDX2tTRFvzn90oOpUT/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
+              <iframe src="https://drive.google.com/file/d/1JyL3wsM0CwGncwPDX2tTRFvzn90oOpUT/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy" title="Modul Ajar Topik 3"></iframe>
             </div>
           </div>
         </div>
@@ -650,7 +650,7 @@
                 <span>embed_preview: Bahan_Ajar_Premiere.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
               </div>
-              <iframe src="https://drive.google.com/file/d/1qXn7uCAAk1UsP-RT5qpW_51cbytToViQ/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
+              <iframe src="https://drive.google.com/file/d/1qXn7uCAAk1UsP-RT5qpW_51cbytToViQ/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy" title="Bahan Ajar Premiere Pro"></iframe>
             </div>
           </div>
         </div>
@@ -686,7 +686,7 @@
                   onerror="this.src='https://placehold.co/600x800/181c24/00eeff?text=Adobe+Premiere+Pro+Workspace'"
                 >
                 <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <span class="text-xs font-mono font-bold text-white bg-[#00eeff]/90 px-3 py-1 rounded-full text-[#1f242d]">
+                  <span class="text-xs font-mono font-bold text-[#1f242d] bg-[#00eeff]/90 px-3 py-1 rounded-full">
                     Klik Perbesar Workspace
                   </span>
                 </div>
@@ -719,7 +719,7 @@
                 <span>video_player: Praktik_PPL.mp4</span>
                 <span class="text-[#00eeff]">VIDEO (3:4)</span>
               </div>
-              <iframe src="https://drive.google.com/file/d/1SoEpughCh5IeiZJXjPypjbzyvjkS8ftp/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
+              <iframe src="https://drive.google.com/file/d/1SoEpughCh5IeiZJXjPypjbzyvjkS8ftp/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy" title="Video Praktik PPL Topik 3"></iframe>
             </div>
           </div>
         </div>
@@ -748,7 +748,7 @@
                 <span>embed_preview: Kegiatan_HUT_RI.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
               </div>
-              <iframe src="https://drive.google.com/file/d/1k2cZkXaJ1f8k3R8Y6TAMCk9rq4LPWe_W/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
+              <iframe src="https://drive.google.com/file/d/1k2cZkXaJ1f8k3R8Y6TAMCk9rq4LPWe_W/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy" title="Dokumentasi Non-Mengajar HUT RI"></iframe>
             </div>
           </div>
         </div>
@@ -777,7 +777,7 @@
                 <span>embed_preview: Rubrik_Penilaian.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
               </div>
-              <iframe src="https://drive.google.com/file/d/16G-l4ZfQO2aTxm2Dw27vB63RaBUY-Zgg/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
+              <iframe src="https://drive.google.com/file/d/16G-l4ZfQO2aTxm2Dw27vB63RaBUY-Zgg/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy" title="Instrumen Penilaian Topik 3"></iframe>
             </div>
           </div>
         </div>
@@ -785,7 +785,7 @@
     </section>
 
     <!-- TAB 4: UTS PPL (TOPIK 4 SIKLUS 1) -->
-    <section id="section-topik4" class="tab-section">
+    <section id="section-topik4" class="tab-section" role="tabpanel">
       <div class="mb-8 border-b border-[#323946] pb-4">
         <div class="flex items-center gap-2 text-xs font-mono font-bold text-[#00eeff] uppercase">
           <span class="w-2 h-2 rounded-full bg-[#00eeff]"></span>
@@ -824,7 +824,7 @@
                 <span>embed_preview: Modul_Ajar_BK.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
               </div>
-              <iframe src="https://drive.google.com/file/d/1P1xxXDFhnmDpyJ0iNokBaSWZf-LcYI6S/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
+              <iframe src="https://drive.google.com/file/d/1P1xxXDFhnmDpyJ0iNokBaSWZf-LcYI6S/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy" title="Modul Ajar Berpikir Komputasional"></iframe>
             </div>
           </div>
         </div>
@@ -853,7 +853,7 @@
                 <span>embed_preview: Bahan_Ajar_BK.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
               </div>
-              <iframe src="https://drive.google.com/file/d/1aAQbr34xis8ZaHfPHWxVlsXB-HZJQZK_/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
+              <iframe src="https://drive.google.com/file/d/1aAQbr34xis8ZaHfPHWxVlsXB-HZJQZK_/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy" title="Bahan Ajar Berpikir Komputasional"></iframe>
             </div>
           </div>
         </div>
@@ -882,7 +882,7 @@
                 <span>embed_preview: Media_Canva_BK.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
               </div>
-              <iframe src="https://drive.google.com/file/d/1Z5fGzVPjoIiT8XxinXXb9JFoWII_sPAa/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
+              <iframe src="https://drive.google.com/file/d/1Z5fGzVPjoIiT8XxinXXb9JFoWII_sPAa/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy" title="Media Pembelajaran Canva"></iframe>
             </div>
           </div>
         </div>
@@ -911,7 +911,7 @@
                 <span>video_player: Praktik_PBL_BK.mp4</span>
                 <span class="text-[#00eeff]">VIDEO (3:4)</span>
               </div>
-              <iframe src="https://drive.google.com/file/d/1ToxGAHYKp5M-94BNbYktdjjiBurcwNcE/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
+              <iframe src="https://drive.google.com/file/d/1ToxGAHYKp5M-94BNbYktdjjiBurcwNcE/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy" title="Video Praktik Mengajar PBL BK"></iframe>
             </div>
           </div>
         </div>
@@ -940,7 +940,7 @@
                 <span>embed_preview: Dokumentasi_OSN_SMKN1.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
               </div>
-              <iframe src="https://drive.google.com/file/d/1yH7IPQR76b2df-FN_FY-dZ9bzxEIjdaC/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
+              <iframe src="https://drive.google.com/file/d/1yH7IPQR76b2df-FN_FY-dZ9bzxEIjdaC/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy" title="Dokumentasi Non-Mengajar OSN"></iframe>
             </div>
           </div>
         </div>
@@ -969,7 +969,7 @@
                 <span>embed_preview: Instrumen_LKPD_BK.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
               </div>
-              <iframe src="https://drive.google.com/file/d/1pb-GlxzGKABombLW0IoC5gJEUy8oKijD/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
+              <iframe src="https://drive.google.com/file/d/1pb-GlxzGKABombLW0IoC5gJEUy8oKijD/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy" title="Instrumen Penilaian TaRL BK"></iframe>
             </div>
           </div>
         </div>
@@ -977,7 +977,7 @@
     </section>
 
     <!-- TAB 5: UAS PPL -->
-    <section id="section-uas" class="tab-section">
+    <section id="section-uas" class="tab-section" role="tabpanel">
       <div class="mb-8 border-b border-[#323946] pb-4">
         <div class="flex items-center gap-2 text-xs font-mono font-bold text-[#00eeff] uppercase">
           <span class="w-2 h-2 rounded-full bg-[#00eeff]"></span>
@@ -1016,7 +1016,7 @@
                 <span>embed_preview: Modul_Ajar_UAS.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
               </div>
-              <iframe src="https://drive.google.com/file/d/1ra4LTz-5HIjNSBZSn0JWA_8Y5wWsX982/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
+              <iframe src="https://drive.google.com/file/d/1ra4LTz-5HIjNSBZSn0JWA_8Y5wWsX982/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy" title="Modul Ajar Final UAS"></iframe>
             </div>
           </div>
         </div>
@@ -1045,7 +1045,7 @@
                 <span>embed_preview: Bahan_Ajar_UAS.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
               </div>
-              <iframe src="https://drive.google.com/file/d/1M6A3FjOXstsuPHyK4WkkyK3egiVMeZGM/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
+              <iframe src="https://drive.google.com/file/d/1M6A3FjOXstsuPHyK4WkkyK3egiVMeZGM/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy" title="Bahan Ajar UAS"></iframe>
             </div>
           </div>
         </div>
@@ -1074,7 +1074,7 @@
                 <span>embed_preview: Media_Ajar_UAS.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
               </div>
-              <iframe src="https://drive.google.com/file/d/1hcixwxHYuoee95PlRvfHmfB05JmSEmF7/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
+              <iframe src="https://drive.google.com/file/d/1hcixwxHYuoee95PlRvfHmfB05JmSEmF7/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy" title="Media Ajar UAS"></iframe>
             </div>
           </div>
         </div>
@@ -1103,7 +1103,7 @@
                 <span>video_player: Praktik_UAS.mp4</span>
                 <span class="text-[#00eeff]">VIDEO (3:4)</span>
               </div>
-              <iframe src="https://drive.google.com/file/d/1-64wBHjdRQFUfszUYJ7kOZGxGdkDxvhB/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
+              <iframe src="https://drive.google.com/file/d/1-64wBHjdRQFUfszUYJ7kOZGxGdkDxvhB/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy" title="Video Pelaksanaan Praktik UAS"></iframe>
             </div>
           </div>
         </div>
@@ -1132,7 +1132,7 @@
                 <span>embed_preview: Kegiatan_Non_Mengajar.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
               </div>
-              <iframe src="https://drive.google.com/file/d/1MKfatB1oz7ngVXMEoZimUB37pS1ECvel/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
+              <iframe src="https://drive.google.com/file/d/1MKfatB1oz7ngVXMEoZimUB37pS1ECvel/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy" title="Dokumentasi Non-Mengajar Piket Sekolah"></iframe>
             </div>
           </div>
         </div>
@@ -1161,7 +1161,7 @@
                 <span>embed_preview: Instrumen_Penilaian_UAS.pdf</span>
                 <span class="text-[#00eeff]">LIVE VIEW (3:4)</span>
               </div>
-              <iframe src="https://drive.google.com/file/d/1wgp7WjYrEWUU1Y-y-ofOgZ3raZVIv7iN/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy"></iframe>
+              <iframe src="https://drive.google.com/file/d/1wgp7WjYrEWUU1Y-y-ofOgZ3raZVIv7iN/preview" class="w-full flex-grow h-full" allow="autoplay" loading="lazy" title="Instrumen Penilaian Design Brief UAS"></iframe>
             </div>
           </div>
         </div>
@@ -1169,7 +1169,7 @@
     </section>
 
     <!-- TAB 6: DOKUMENTASI KEGIATAN -->
-    <section id="section-dokumentasi" class="tab-section">
+    <section id="section-dokumentasi" class="tab-section" role="tabpanel">
       <div class="mb-8 border-b border-[#323946] pb-4">
         <div class="flex items-center gap-2 text-xs font-mono font-bold text-[#00eeff] uppercase">
           <span class="w-2 h-2 rounded-full bg-[#00eeff]"></span>
@@ -1179,13 +1179,13 @@
           Dokumentasi Kegiatan <span class="text-[#00eeff]">PPL Mandiri</span>
         </h2>
         <p class="text-xs sm:text-sm text-slate-300 mt-1">
-          Dokumentasi visual aktivitas praktik mengajar di studio/lab, kegiatan kesiswaan, dan bimbingan bersama DPL &amp; Guru Pamong. Klik foto untuk memperbesar.
+          Dokumentasi visual aktivitas praktik mengajar di studio/lab, kegiatan kesiswaan, dan bimbingan bersama DPL &amp; Guru Pamong. Klik foto untuk memperbesar tampilan.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5" id="gallery-container">
         <!-- Embed 1 (3:4) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1WArzWYBMJ5GBL5fC05XCWoiRgjhgn3BK', 'Dokumentasi 01 - Praktik Studio')">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openGalleryLightbox(0)">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 01</span>
             <span class="text-[#00eeff]">3:4</span>
@@ -1201,7 +1201,7 @@
         </div>
 
         <!-- Embed 2 (3:4) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1IwHfOnHC2YEXmW979uoMZtswSliPS0n0', 'Dokumentasi 02 - Aktivitas Mengajar')">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openGalleryLightbox(1)">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 02</span>
             <span class="text-[#00eeff]">3:4</span>
@@ -1217,7 +1217,7 @@
         </div>
 
         <!-- Embed 3 (3:4) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1hvIzJRR7MZRpHX6D8IfBcL3wiEZpEDGK', 'Dokumentasi 03 - Bimbingan Teknis Lab')">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openGalleryLightbox(2)">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 03</span>
             <span class="text-[#00eeff]">3:4</span>
@@ -1233,7 +1233,7 @@
         </div>
 
         <!-- Embed 4 (3:4) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1D9hYvjKecHopTk8eBaiZ_sSoeSVTGOm5', 'Dokumentasi 04 - Diskusi Proyek')">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openGalleryLightbox(3)">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 04</span>
             <span class="text-[#00eeff]">3:4</span>
@@ -1249,7 +1249,7 @@
         </div>
 
         <!-- Embed 5 (3:4) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1YxVDQ-hJ-LVPfOzPLwpV6PjkQwo1scQs', 'Dokumentasi 05 - Pembelajaran Kelas')">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openGalleryLightbox(4)">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 05</span>
             <span class="text-[#00eeff]">3:4</span>
@@ -1265,7 +1265,7 @@
         </div>
 
         <!-- Embed 6 (3:4) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1gIiaoB0csAhg-AS3qXXjku2W4DFo_Qz8', 'Dokumentasi 06 - Kolaborasi Peserta Didik')">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openGalleryLightbox(5)">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 06</span>
             <span class="text-[#00eeff]">3:4</span>
@@ -1281,7 +1281,7 @@
         </div>
 
         <!-- Embed 7 (3:4) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1vyUGRe14xD80lPr8I2FR38YRJzatLTrY', 'Dokumentasi 07 - Praktikum Editing')">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openGalleryLightbox(6)">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 07</span>
             <span class="text-[#00eeff]">3:4</span>
@@ -1297,7 +1297,7 @@
         </div>
 
         <!-- Embed 8 (3:4) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1MKfatB1oz7ngVXMEoZimUB37pS1ECvel', 'Dokumentasi 08 - Monitoring Kelompok')">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openGalleryLightbox(7)">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 08</span>
             <span class="text-[#00eeff]">3:4</span>
@@ -1313,7 +1313,7 @@
         </div>
 
         <!-- Embed 9 (4:3) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1CIfg0-tt2hxXifmilkMqu8naEd73GYx0', 'Dokumentasi 09 - Bimbingan DPL & Guru Pamong')">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openGalleryLightbox(8)">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 09</span>
             <span class="text-[#00eeff]">4:3</span>
@@ -1329,7 +1329,7 @@
         </div>
 
         <!-- Embed 10 (4:3) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1g58RbUHmwGcLgB3E9PbqDnXkEoKqaxBL', 'Dokumentasi 10 - Kegiatan Kesiswaan & Non-Mengajar')">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openGalleryLightbox(9)">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 10</span>
             <span class="text-[#00eeff]">4:3</span>
@@ -1345,7 +1345,7 @@
         </div>
 
         <!-- Embed 11 (4:3) -->
-        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/d/1EQvE8D68mFU9votKGmEhuFdEHXCKlO1N', 'Dokumentasi 11 - Evaluasi & Refleksi')">
+        <div class="designer-card bg-[#323946] rounded-2xl border border-[#3f4859] overflow-hidden shadow-card p-2 flex flex-col cursor-pointer group" onclick="openGalleryLightbox(10)">
           <div class="bg-[#1f242d] px-3 py-1.5 border-b border-[#3f4859] flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2 rounded-lg flex-shrink-0">
             <span>DOK // 11</span>
             <span class="text-[#00eeff]">4:3</span>
@@ -1405,7 +1405,7 @@
       onclick="goToPrevTab()" 
       class="w-10 h-10 rounded-full bg-[#1f242d] text-[#00eeff] hover:bg-[#00eeff] hover:text-[#1f242d] hover:shadow-neon-sm active:scale-90 transition-all duration-200 flex items-center justify-center text-sm font-bold disabled:opacity-30 disabled:pointer-events-none"
       title="Halaman Sebelumnya"
-      aria-label="Kembali"
+      aria-label="Halaman Sebelumnya"
     >
       &larr;
     </button>
@@ -1419,27 +1419,39 @@
       onclick="goToNextTab()" 
       class="w-10 h-10 rounded-full bg-[#00eeff] text-[#1f242d] hover:bg-[#33f3ff] hover:shadow-neon-lg active:scale-90 transition-all duration-200 flex items-center justify-center text-sm font-bold disabled:opacity-30 disabled:pointer-events-none"
       title="Halaman Selanjutnya"
-      aria-label="Selanjutnya"
+      aria-label="Halaman Selanjutnya"
     >
       &rarr;
     </button>
   </div>
 
-  <!-- Interactive Lightbox Modal -->
+  <!-- Interactive Lightbox Modal with Next/Prev Controls -->
   <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden opacity-0 flex items-center justify-center p-4 transition-opacity duration-300" onclick="closeLightbox(event)">
     <div class="relative max-w-5xl max-h-[90vh] flex flex-col items-center" onclick="event.stopPropagation()">
-      <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-slate-300 hover:text-[#00eeff] text-2xl font-bold transition-colors">
+      <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-slate-300 hover:text-[#00eeff] text-2xl font-bold transition-colors p-1" aria-label="Tutup Pratinjau">
         ✕
       </button>
-      <img id="lightbox-img" src="" alt="Preview" class="max-w-full max-h-[80vh] rounded-xl border border-[#00eeff]/40 shadow-2xl object-contain">
-      <p id="lightbox-caption" class="text-xs font-mono text-slate-300 mt-3 text-center"></p>
+
+      <!-- Prev button in lightbox -->
+      <button id="lightbox-btn-prev" onclick="prevLightboxImage()" class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 border border-[#00eeff]/50 text-[#00eeff] flex items-center justify-center text-lg font-bold hover:bg-[#00eeff] hover:text-[#1f242d] transition-colors" aria-label="Foto Sebelumnya">
+        &#10094;
+      </button>
+
+      <img id="lightbox-img" src="" alt="Preview" class="max-w-full max-h-[75vh] sm:max-h-[80vh] rounded-xl border border-[#00eeff]/40 shadow-2xl object-contain">
+
+      <!-- Next button in lightbox -->
+      <button id="lightbox-btn-next" onclick="nextLightboxImage()" class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 border border-[#00eeff]/50 text-[#00eeff] flex items-center justify-center text-lg font-bold hover:bg-[#00eeff] hover:text-[#1f242d] transition-colors" aria-label="Foto Selanjutnya">
+        &#10095;
+      </button>
+
+      <p id="lightbox-caption" class="text-xs font-mono text-slate-300 mt-3 text-center px-4"></p>
     </div>
   </div>
 
   <!-- Footer Minimalis -->
   <footer class="mt-auto border-t border-[#323946] py-6 text-center text-xs text-slate-400 font-mono">
     <p>&copy; 2026 Portofolio PPL PPG Prajabatan • SMK Negeri 1 Surabaya</p>
-    <p class="text-[11px] text-slate-500 mt-1">Program Keahlian Broadcasting dan Perfilman</p>
+    <p class="text-[11px] text-slate-500 mt-1">Program Keahlian Broadcasting dan Perfilman • Andrean Putra Fermana</p>
   </footer>
 
   <script>
@@ -1454,6 +1466,22 @@
     
     const tabKeys = tabList.map(t => t.id);
     let currentTabIndex = 0;
+
+    // Gallery images collection for Lightbox carousel
+    const galleryItems = [
+      { src: 'https://lh3.googleusercontent.com/d/1WArzWYBMJ5GBL5fC05XCWoiRgjhgn3BK', caption: 'Dokumentasi 01 - Praktik Studio Perfilman' },
+      { src: 'https://lh3.googleusercontent.com/d/1IwHfOnHC2YEXmW979uoMZtswSliPS0n0', caption: 'Dokumentasi 02 - Aktivitas Mengajar di Kelas' },
+      { src: 'https://lh3.googleusercontent.com/d/1hvIzJRR7MZRpHX6D8IfBcL3wiEZpEDGK', caption: 'Dokumentasi 03 - Bimbingan Teknis Lab Komputer' },
+      { src: 'https://lh3.googleusercontent.com/d/1D9hYvjKecHopTk8eBaiZ_sSoeSVTGOm5', caption: 'Dokumentasi 04 - Diskusi Proyek Peserta Didik' },
+      { src: 'https://lh3.googleusercontent.com/d/1YxVDQ-hJ-LVPfOzPLwpV6PjkQwo1scQs', caption: 'Dokumentasi 05 - Pembelajaran Kelas Interaktif' },
+      { src: 'https://lh3.googleusercontent.com/d/1gIiaoB0csAhg-AS3qXXjku2W4DFo_Qz8', caption: 'Dokumentasi 06 - Kolaborasi Tim Creative Agency' },
+      { src: 'https://lh3.googleusercontent.com/d/1vyUGRe14xD80lPr8I2FR38YRJzatLTrY', caption: 'Dokumentasi 07 - Praktikum Editing Video Premiere Pro' },
+      { src: 'https://lh3.googleusercontent.com/d/1MKfatB1oz7ngVXMEoZimUB37pS1ECvel', caption: 'Dokumentasi 08 - Monitoring & Scaffolding Kelompok' },
+      { src: 'https://lh3.googleusercontent.com/d/1CIfg0-tt2hxXifmilkMqu8naEd73GYx0', caption: 'Dokumentasi 09 - Bimbingan DPL & Guru Pamong' },
+      { src: 'https://lh3.googleusercontent.com/d/1g58RbUHmwGcLgB3E9PbqDnXkEoKqaxBL', caption: 'Dokumentasi 10 - Kegiatan Non-Mengajar & Kesiswaan' },
+      { src: 'https://lh3.googleusercontent.com/d/1EQvE8D68mFU9votKGmEhuFdEHXCKlO1N', caption: 'Dokumentasi 11 - Evaluasi & Refleksi Bersama Guru Pamong' }
+    ];
+    let currentGalleryIndex = -1;
 
     // Laser sweep bar trigger
     function triggerLaserEffect() {
@@ -1504,6 +1532,22 @@
 
     // Lightbox Controls
     function openLightbox(src, caption) {
+      currentGalleryIndex = -1;
+      updateLightboxContent(src, caption);
+      document.getElementById('lightbox-btn-prev').style.display = 'none';
+      document.getElementById('lightbox-btn-next').style.display = 'none';
+    }
+
+    function openGalleryLightbox(index) {
+      if (index < 0 || index >= galleryItems.length) return;
+      currentGalleryIndex = index;
+      const item = galleryItems[index];
+      updateLightboxContent(item.src, `${item.caption} (${index + 1}/${galleryItems.length})`);
+      document.getElementById('lightbox-btn-prev').style.display = 'flex';
+      document.getElementById('lightbox-btn-next').style.display = 'flex';
+    }
+
+    function updateLightboxContent(src, caption) {
       const modal = document.getElementById('lightbox-modal');
       const img = document.getElementById('lightbox-img');
       const cap = document.getElementById('lightbox-caption');
@@ -1515,11 +1559,30 @@
       }
     }
 
+    function prevLightboxImage() {
+      if (currentGalleryIndex > 0) {
+        openGalleryLightbox(currentGalleryIndex - 1);
+      } else {
+        openGalleryLightbox(galleryItems.length - 1);
+      }
+    }
+
+    function nextLightboxImage() {
+      if (currentGalleryIndex < galleryItems.length - 1) {
+        openGalleryLightbox(currentGalleryIndex + 1);
+      } else {
+        openGalleryLightbox(0);
+      }
+    }
+
     function closeLightbox(e) {
       const modal = document.getElementById('lightbox-modal');
       if (modal) {
         modal.classList.add('opacity-0');
-        setTimeout(() => modal.classList.add('hidden'), 300);
+        setTimeout(() => {
+          modal.classList.add('hidden');
+          currentGalleryIndex = -1;
+        }, 300);
       }
     }
 
@@ -1638,15 +1701,25 @@
 
     // Keyboard navigation
     document.addEventListener('keydown', function (e) {
+      const modal = document.getElementById('lightbox-modal');
+      const isLightboxOpen = modal && !modal.classList.contains('hidden');
+
       if (e.key === 'Escape') {
         closeSidebar();
         closeLightbox();
-      }
-      if (e.altKey && e.key === 'ArrowLeft') {
-        goToPrevTab();
-      }
-      if (e.altKey && e.key === 'ArrowRight') {
-        goToNextTab();
+      } else if (isLightboxOpen && currentGalleryIndex !== -1) {
+        if (e.key === 'ArrowLeft') {
+          prevLightboxImage();
+        } else if (e.key === 'ArrowRight') {
+          nextLightboxImage();
+        }
+      } else {
+        if (e.altKey && e.key === 'ArrowLeft') {
+          goToPrevTab();
+        }
+        if (e.altKey && e.key === 'ArrowRight') {
+          goToNextTab();
+        }
       }
     });
 
